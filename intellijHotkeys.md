@@ -26,3 +26,5 @@ Hotkey | Description
 <kbd>Alt</kbd> + <kbd>Down</kbd> | Move current line down
 <kbd>Ctrl</kbd> + <kbd>W</kbd> | Close current window
 <kbd>Ctrl</kbd> + <kbd>D</kbd> | Delete current line
+
+[Back](README.md)
