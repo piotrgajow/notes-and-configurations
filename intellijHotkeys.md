@@ -1,3 +1,5 @@
+[Back](README.md)
+
 # Default hotkeys
 
 Hotkey  | Description
