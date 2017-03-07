@@ -5,17 +5,17 @@
 # uname
 Print system information
 
- | | 
----|---|:---
-`-a` | `--all` | Print all information
+Parameter | Description 
+---|:---
+`-a`,`--all` | Print all information
 
 # nc
 TCP/IP tool
 
- | | 
----|---|:---
-`-v` | | Verbose mode
-`-z` | | Network scanning (zero-I/O mode)
+Parameter | Description
+---|:---
+`-v` | Verbose mode
+`-z` | Network scanning (zero-I/O mode)
 
 # printenv
 Print environment variables
