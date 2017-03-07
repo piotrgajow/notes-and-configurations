@@ -2,6 +2,15 @@
 
 [Explain Shell webpage](http://explainshell.com/)
 
+# curl
+Data transfer using URL
+
+Parameter | Description 
+---|:---
+`-v`,`--verbose` | Verbose mode
+`-I`,`--head` | Fetch Http headers only 
+`-L`,`--location` | In case of redirection, redoes the curl to the new address
+
 # uname
 Print system information
 
