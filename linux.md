@@ -2,10 +2,20 @@
 
 [Explain Shell webpage](http://explainshell.com/)
 
-Command | Description
----:|:---
-`uname -a` | Get system information
-`nc -vz $hostname $port` | Check if given $port is open on $hostname
-`printenv` | Print environment variables
+# uname
+Print system information
+
+---|---|:---
+`-a` | `--all` | Print all information
+
+# nc
+TCP/IP tool
+
+---|---|:---
+`-v` | | Verbose mode
+`-z` | | Network scanning (zero-I/O mode)
+
+# printenv
+Print environment variables
 
 [Back](README.md)
