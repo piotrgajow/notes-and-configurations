@@ -29,4 +29,21 @@ Parameter | Description
 # printenv
 Print environment variables
 
+# apache
+
+## apachectl
+Apache server control interface
+
+Command | Description
+---|:---
+`configtest` | Tests
+
+## a2enmod a2dismod
+Enable/Disable apache modules
+
+## a2ensite a2dissite 
+Enable/Disable sites from sites-available
+
+apache: apachectl a2enmod a2ensite a2dissite
+
 [Back](README.md)
