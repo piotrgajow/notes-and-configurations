@@ -29,6 +29,13 @@ Parameter | Description
 # printenv
 Print environment variables
 
+# free
+Display memory usage in the system
+
+Parameter | Description
+---|:---
+`-m` | Use MiB unit for display
+
 # apache
 
 ## apachectl
