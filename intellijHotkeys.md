@@ -18,6 +18,7 @@ Hotkey  | Settings | Description
 <kbd>Shift</kbd> + <kbd>F6</kbd> | Main menu > Refactor > Rename... | Rename
 <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Y</kbd> | Main menu > File > Synchronize | Synchronize project
 <kbd>Alt</kbd> + <kbd>Insert</kbd> | Other > New | Create new file/folder
+<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>V</kbd> | Main menu > Refactor > Extract > Variable... | Extract variable refactoring 
 
 # Custom hotkeys
 

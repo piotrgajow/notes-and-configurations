@@ -6,4 +6,6 @@ Contains notes regarding usefull hotkeys and commands
 
 ## Commands
 [Linux](linux.md)
+[Bash](bash.md)
 [Git](git.md)
+
