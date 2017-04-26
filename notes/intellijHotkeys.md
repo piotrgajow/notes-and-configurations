@@ -17,6 +17,7 @@ Hotkey  | Settings | Description
 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd> | Main menu > View > Recently Changed Files | Opens list of recently edited files
 <kbd>Ctrl</kbd> + <kbd>0</kbd>..<kbd>9</kbd> | Other > Go to Bookmark n | Jumps to bookmark 0..9
 <kbd>Ctrl</kbd> + <kbd>F5</kbd> | Other > Rerun | Rerun
+<kbd>Alt</kbd> + <kbd>F12</kbd> | Other > Terminal | Toggle terminal view
 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>0</kbd>..<kbd>9</kbd> | Other > Toggle Bookmark n | Adds/Deletes bookmark 0..9 on the current line of code
 <kbd>Alt</kbd> + <kbd>Insert</kbd> | Other > New | Create new file/folder
 
