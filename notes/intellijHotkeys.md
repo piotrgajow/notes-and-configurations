@@ -1,10 +1,10 @@
-[Back](README.md)
+[Back](../README.md)
 
 # Default hotkeys
 
 Hotkey  | Settings | Description
 ---:|---|:---
-<kbd>Ctrl</kbd> + <kbd>N</kbd> | Main menu > Navigate > File... | Open source file 
+<kbd>Ctrl</kbd> + <kbd>N</kbd> | Main menu > Navigate > File... | Open source file
 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd> | Main menu > Navigate > Class... | Open project file
 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> | Main menu > View > Quick Definition | Open function definition in small window
 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>0</kbd>..<kbd>9</kbd> | Other > Toggle Bookmark n | Adds/Deletes bookmark 0..9 on the current line of code
@@ -18,7 +18,7 @@ Hotkey  | Settings | Description
 <kbd>Shift</kbd> + <kbd>F6</kbd> | Main menu > Refactor > Rename... | Rename
 <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Y</kbd> | Main menu > File > Synchronize | Synchronize project
 <kbd>Alt</kbd> + <kbd>Insert</kbd> | Other > New | Create new file/folder
-<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>V</kbd> | Main menu > Refactor > Extract > Variable... | Extract variable refactoring 
+<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>V</kbd> | Main menu > Refactor > Extract > Variable... | Extract variable refactoring
 
 # Custom hotkeys
 
@@ -33,4 +33,4 @@ Hotkey | Settings | Description
 <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Up</kbd> | Editor Actions > Clone Caret Above | Clones caret to line above enabling multiline edits
 <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Down</kbd> | Editor Actions > Clone Caret Below | Clones caret to line above enabling multiline edits
 
-[Back](README.md)
+[Back](../README.md)

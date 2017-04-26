@@ -1,8 +1,8 @@
-[Back](README.md)
+[Back](../README.md)
 
 # log
 
-Options | Description 
+Options | Description
 ---|:---
 `X..Y` | Show log between two given commits
 `--oneline` | Show only commit hash and subject
@@ -11,4 +11,4 @@ Options | Description
 Fix errors with to long path names in Widnows (not tested)
 `git config core.longpaths true`
 
-[Back](README.md)
+[Back](../README.md)

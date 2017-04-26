@@ -1,11 +1,7 @@
 # Notes
 Contains notes regarding usefull hotkeys and commands
 
-## Hotkeys
-[IntelliJ Idea](intellijHotkeys.md)
-
-## Commands
-[Linux](linux.md)
-[Bash](bash.md)
-[Git](git.md)
-
+* [IntelliJ Idea hotkeys](notes/intellijHotkeys.md)
+* [Linux](notes/linux.md)
+* [Bash](notes/bash.md)
+* [Git](notes/git.md)

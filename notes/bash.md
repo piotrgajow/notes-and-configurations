@@ -1,4 +1,4 @@
-[Back](README.md)
+[Back](../README.md)
 
 # Command line menu
 
@@ -15,9 +15,9 @@ break
 done
 ```
 
-# Current date formatted 
+# Current date formatted
 ```
 local NOW=`date +"%Y_%m_%d__%H_%M"`;
 ```
 
-[Back](README.md)
+[Back](../README.md)
