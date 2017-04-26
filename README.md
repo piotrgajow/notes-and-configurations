@@ -35,3 +35,7 @@ Repository for configuration files used in development tools
     git config --global alias.unhide 'update-index --no-assume-unchanged'
     git config --global alias.show-hidden '!git ls-files -v | grep ^[a-z]'
     git config --global alias.unstage 'reset HEAD'
+
+### Git Bash
+
+Add contents of [scripts.sh](config/git/scripts.sh) to `~/.bashrc` file
