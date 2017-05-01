@@ -2,6 +2,30 @@
 
 [Explain Shell webpage](http://explainshell.com/)
 
+# Hotkeys
+Hotkey | Description
+---|:---
+<kbd>Ctrl</kbd> + <kbd>R</kbd> | Search in command history
+<kbd>Ctrl</kbd> + <kbd>L</kbd> | Clear terminal window
+<kbd>Ctrl</kbd> + <kbd>U</kbd> | Copies current command into clipboard
+<kbd>Ctrl</kbd> + <kbd>Y</kbd> | Pastes command from clipboard
+<kbd>Ctrl</kbd> + <kbd>A</kbd> | Sets cursor at the beginning of the line
+<kbd>Ctrl</kbd> + <kbd>E</kbd> | Sets cursor at the end of the line
+<kbd>Ctrl</kbd> + <kbd>K</kbd> | Removes text after cursor
+<kbd>Alt</kbd> + <kbd>Backspace</kbd> | Removes last word
+
+# history
+
+`!!` - Runs previous command
+
+`!!:` + `0..9` - Uses part of previous command
+
+`cd -` - Returns to previous directory
+
+`^string^replace` - Runs previous command with `string` replaced by `replace`
+
+`{a,b,c}1` - Creates list of string `a1`, `b1`, `c1`
+
 # curl
 Data transfer using URL
 
