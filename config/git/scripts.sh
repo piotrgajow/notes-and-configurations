@@ -72,3 +72,15 @@ function mongorestore {
 
 export MAVEN_HOME=/c/tools/maven/3.3.9
 export PATH="$PATH:$MAVEN_HOME/bin"
+
+# Tomcat
+
+export TOMCAT_HOME=/c/tools/tomcat/8.5.13
+
+function tomcatstart {
+	"$TOMCAT_HOME"/bin/startup.sh
+}
+
+function tomcatend {
+	"$TOMCAT_HOME"/bin/shutdown.sh
+}
