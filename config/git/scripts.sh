@@ -89,3 +89,14 @@ function tomcatend {
 
 export GROOVY_HOME=/c/tools/groovy/2.4.10
 export PATH="$PATH:$GROOVY_HOME/bin"
+
+# Git
+
+function git {
+	if [ "$1" == "pushu" ]
+	then
+		command git rev-parse --abbrev-ref HEAD | xargs git push -u origin
+	else
+		command git "$@"
+	fi
+}
