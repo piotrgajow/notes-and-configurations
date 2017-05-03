@@ -67,3 +67,36 @@ function mongorestore {
     "$MONGO_HOME"/bin/mongorestore.exe --drop "$DB_DIR"
     echo "Restored mongoDB database"
 }
+
+# Maven
+
+export MAVEN_HOME=/c/tools/maven/3.3.9
+export PATH="$PATH:$MAVEN_HOME/bin"
+
+# Tomcat
+
+export TOMCAT_HOME=/c/tools/tomcat/8.5.13
+
+function tomcatstart {
+	"$TOMCAT_HOME"/bin/startup.sh
+}
+
+function tomcatend {
+	"$TOMCAT_HOME"/bin/shutdown.sh
+}
+
+# Groovy
+
+export GROOVY_HOME=/c/tools/groovy/2.4.10
+export PATH="$PATH:$GROOVY_HOME/bin"
+
+# Git
+
+function git {
+	if [ "$1" == "pushu" ]
+	then
+		command git rev-parse --abbrev-ref HEAD | xargs git push -u origin
+	else
+		command git "$@"
+	fi
+}

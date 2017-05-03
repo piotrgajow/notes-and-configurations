@@ -25,13 +25,13 @@ Hotkey  | Settings | Description
 
 Hotkey | Settings | Description
 ---:|---|:---
-<kbd>Alt</kbd> + <kbd>S</kbd> | Editor Actions > Extend Selection | Extend selected text
-<kbd>Alt</kbd> + <kbd>Up</kbd> | Main menu > Code > Move Line Up | Move current line up
-<kbd>Alt</kbd> + <kbd>Down</kbd> | Main menu > Code > Move Line Down | Move current line down
-<kbd>Alt</kbd> + <kbd>LMB</kbd> | Main menu > Navigate > Declaration | Go to method declaration
-<kbd>Ctrl</kbd> + <kbd>W</kbd> | Main menu > Window > Editor Tabs > Close | Close current window
-<kbd>Ctrl</kbd> + <kbd>D</kbd> | Editor Actions > Delete Line | Delete current line
 <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Up</kbd> | Editor Actions > Clone Caret Above | Clones caret to line above enabling multiline edits
 <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Down</kbd> | Editor Actions > Clone Caret Below | Clones caret to line above enabling multiline edits
+<kbd>Ctrl</kbd> + <kbd>D</kbd> | Editor Actions > Delete Line | Delete current line
+<kbd>Alt</kbd> + <kbd>S</kbd> | Editor Actions > Extend Selection | Extend selected text
+<kbd>Alt</kbd> + <kbd>LMB</kbd> | Main menu > Navigate > Declaration | Go to method declaration
+<kbd>Alt</kbd> + <kbd>Down</kbd> | Main menu > Code > Move Line Down | Move current line down
+<kbd>Alt</kbd> + <kbd>Up</kbd> | Main menu > Code > Move Line Up | Move current line up
+<kbd>Ctrl</kbd> + <kbd>W</kbd> | Main menu > Window > Editor Tabs > Close | Close current window
 
 [Back](../README.md)
