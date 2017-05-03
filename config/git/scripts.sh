@@ -84,3 +84,8 @@ function tomcatstart {
 function tomcatend {
 	"$TOMCAT_HOME"/bin/shutdown.sh
 }
+
+# Groovy
+
+export GROOVY_HOME=/c/tools/groovy/2.4.10
+export PATH="$PATH:$GROOVY_HOME/bin"
