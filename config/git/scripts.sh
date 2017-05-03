@@ -6,12 +6,9 @@ function killall {
 
 # Grails
 
-export GRAILS_HOME=/d/tools/grails/3.2.7
 export PATH="$PATH:$GRAILS_HOME/bin"
 
 # MySQL
-
-export MYSQL_HOME=/d/tools/mysql/5.7.17
 
 alias mysqlstart="$MYSQL_HOME/bin/mysqld &"
 alias mysqlend="killall mysqld"
@@ -39,19 +36,15 @@ function mysqlimport {
 
 # Liquibase
 
-export LIQUIBASE_HOME=/d/tools/liquibase/3.5.3
 export PATH="$PATH:$LIQUIBASE_HOME"
 
 # Sublime Text
 
-export SUBLIME_HOME="/d/Programs/Sublime Text 3"
 function subl {
     "$SUBLIME_HOME"/sublime_text.exe $@ &
 }
 
 # mongoDB
-
-export MONGO_HOME=/d/Programs/mongodb/3.0.11
 
 function mongostart {
     "$MONGO_HOME"/bin/mongod.exe --dbpath "$MONGO_HOME"/data/db > "$MONGO_HOME"/run.log &
@@ -70,12 +63,9 @@ function mongorestore {
 
 # Maven
 
-export MAVEN_HOME=/c/tools/maven/3.3.9
 export PATH="$PATH:$MAVEN_HOME/bin"
 
 # Tomcat
-
-export TOMCAT_HOME=/c/tools/tomcat/8.5.13
 
 function tomcatstart {
 	"$TOMCAT_HOME"/bin/startup.sh
@@ -87,7 +77,6 @@ function tomcatend {
 
 # Groovy
 
-export GROOVY_HOME=/c/tools/groovy/2.4.10
 export PATH="$PATH:$GROOVY_HOME/bin"
 
 # Git
