@@ -67,3 +67,8 @@ function mongorestore {
     "$MONGO_HOME"/bin/mongorestore.exe --drop "$DB_DIR"
     echo "Restored mongoDB database"
 }
+
+# Maven
+
+export MAVEN_HOME=/c/tools/maven/3.3.9
+export PATH="$PATH:$MAVEN_HOME/bin"
