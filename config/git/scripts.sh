@@ -1,3 +1,13 @@
+# Utility
+function killall {
+    ps | grep "$1" | tr  -s ' ' | cut -d' ' -f2 | xargs kill
+}
+function checkHome {
+    test -z "$1" && echo "Proper path variable in ~/.bashrc  file not set" &&  return 1
+    test ! -d "$1" && echo "Proper path variable in ~/.bashrc does not point to valid directory" && return 1
+    return 0
+}
+
 # Git
 function git {
 	if [ "$1" == "pushu" ]
@@ -9,38 +19,52 @@ function git {
 }
 
 # Grails
-export PATH="$PATH:$GRAILS_HOME/bin"
+test -d "$GRAILS_HOME" && export PATH="$PATH:$GRAILS_HOME/bin"
 
 # Groovy
-export PATH="$PATH:$GROOVY_HOME/bin"
+test -d "$GROOVY_HOME" && export PATH="$PATH:$GROOVY_HOME/bin"
 
 # Liquibase
-export PATH="$PATH:$LIQUIBASE_HOME"
+test -d "$LIQUIBASE_HOME" && export PATH="$PATH:$LIQUIBASE_HOME"
 
 # Maven
-export PATH="$PATH:$MAVEN_HOME/bin"
+test -d "$MAVEN_HOME" && export PATH="$PATH:$MAVEN_HOME/bin"
 
 # mongoDB
 function mongostart {
+    checkHome "$MONGO_HOME" || return
     "$MONGO_HOME"/bin/mongod.exe --dbpath "$MONGO_HOME"/data/db > "$MONGO_HOME"/run.log &
 }
 function mongoend {
+    checkHome "$MONGO_HOME" || return
     killall mongod
 }
 function mongo {
+    checkHome "$MONGO_HOME" || return
     "$MONGO_HOME"/bin/mongo
 }
 function mongorestore {
+    checkHome "$MONGO_HOME" || return
     read -p 'Database dump directory: ' DB_DIR
     "$MONGO_HOME"/bin/mongorestore.exe --drop "$DB_DIR"
     echo "Restored mongoDB database"
 }
 
 # MySQL
-alias mysqlstart="$MYSQL_HOME/bin/mysqld &"
-alias mysqlend="killall mysqld"
-alias mysql="winpty $MYSQL_HOME/bin/mysql"
+function mysqlstart {
+    checkHome "$MYSQL_HOME" || return
+    "$MYSQL_HOME"/bin/mysqld &
+}
+function mysqlend {
+    checkHome "$MYSQL_HOME" || return
+    killall mysqld
+}
+function mysql {
+    checkHome "$MYSQL_HOME" || return
+    winpty "$MYSQL_HOME"/bin/mysql
+}
 function mysqldump {
+    checkHome "$MYSQL_HOME" || return
     read -p 'Databse user name: ' USER
     read -p 'Database host: ' HOST
     read -p 'Port: ' PORT
@@ -51,6 +75,7 @@ function mysqldump {
     echo "$DB@$HOST dumped to file: $DUMP_NAME"
 }
 function mysqlimport {
+    checkHome "$MYSQL_HOME" || return
     read -p 'Database user name: ' USER
     read -p 'Database dump file: ' DUMP_FILE
     read -p 'Database name: ' DB
@@ -63,19 +88,17 @@ function mysqlimport {
 
 # Sublime Text
 function subl {
+    checkHome "$SUBLIME_HOME" || return
     "$SUBLIME_HOME"/sublime_text.exe $@ &
 }
 
 # Tomcat
 function tomcatstart {
+    checkHome "$TOMCAT_HOME" || return
 	"$TOMCAT_HOME"/bin/startup.sh
 }
 
 function tomcatend {
-	"$TOMCAT_HOME"/bin/shutdown.sh
-}
-
-# Utility
-function killall {
-    ps | grep "$1" | tr  -s ' ' | cut -d' ' -f2 | xargs kill
+    checkHome "$TOMCAT_HOME" || return
+    "$TOMCAT_HOME"/bin/shutdown.sh
 }
