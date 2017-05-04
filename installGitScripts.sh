@@ -10,6 +10,7 @@ echo 'export LIQUIBASE_HOME=' >> ~/.bashrc
 echo 'export MAVEN_HOME=' >> ~/.bashrc
 echo 'export MONGO_HOME=' >> ~/.bashrc
 echo 'export MYSQL_HOME=' >> ~/.bashrc
+echo 'export NODE_HOME=' >> ~/.bashrc
 echo 'export SUBLIME_HOME=' >> ~/.bashrc
 echo 'export TOMCAT_HOME=' >> ~/.bashrc
 echo '' >> ~/.bashrc

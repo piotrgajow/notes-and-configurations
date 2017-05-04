@@ -86,6 +86,9 @@ function mysqlimport {
     echo 'Import finished.'
 }
 
+# Node
+test -d "$NODE_HOME" && export PATH="$PATH:$NODE_HOME"
+
 # Sublime Text
 function subl {
     checkHome "$SUBLIME_HOME" || return
