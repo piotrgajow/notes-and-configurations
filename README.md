@@ -29,13 +29,5 @@ Repository for configuration files used in development tools
 
 ### Git
 
-#### Aliases
-
-    git config --global alias.hide 'update-index --assume-unchanged'
-    git config --global alias.unhide 'update-index --no-assume-unchanged'
-    git config --global alias.show-hidden '!git ls-files -v | grep ^[a-z]'
-    git config --global alias.unstage 'reset HEAD'
-
-### Git Bash
-
-Add contents of [scripts.sh](config/git/scripts.sh) to `~/.bashrc` file
+- Execute `installGiSettings.sh` to add git aliases and setup global `.gitignore`
+- Execute `installGitScripts.sh` to add custom commands to git bash (might require setting additional variables in `~/.bashrc`)
