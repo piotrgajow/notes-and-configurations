@@ -7,6 +7,9 @@ function checkHome {
     test ! -d "$1" && echo "Proper path variable in ~/.bashrc does not point to valid directory" && return 1
     return 0
 }
+function addToPath {
+    test -d "$1" && export PATH="$PATH:$1$2"
+}
 
 # Git
 function git {
@@ -19,16 +22,16 @@ function git {
 }
 
 # Grails
-test -d "$GRAILS_HOME" && export PATH="$PATH:$GRAILS_HOME/bin"
+addToPath "$GRAILS_HOME" '/bin'
 
 # Groovy
-test -d "$GROOVY_HOME" && export PATH="$PATH:$GROOVY_HOME/bin"
+addToPath "$GROOVY_HOME" '/bin'
 
 # Liquibase
-test -d "$LIQUIBASE_HOME" && export PATH="$PATH:$LIQUIBASE_HOME"
+addToPath "$LIQUIBASE_HOME"
 
 # Maven
-test -d "$MAVEN_HOME" && export PATH="$PATH:$MAVEN_HOME/bin"
+addToPath "$MAVEN_HOME" '/bin'
 
 # mongoDB
 function mongostart {
@@ -87,7 +90,7 @@ function mysqlimport {
 }
 
 # Node
-test -d "$NODE_HOME" && export PATH="$PATH:$NODE_HOME"
+addToPath "$NODE_HOME"
 
 # Sublime Text
 function subl {
