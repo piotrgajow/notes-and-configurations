@@ -5,6 +5,7 @@ Contains notes regarding usefull hotkeys and commands
 * [Linux](notes/linux.md)
 * [Bash](notes/bash.md)
 * [Git](notes/git.md)
+* [MySQL](notes/mysql.md)
 
 # Configurations
 Repository for configuration files used in development tools
