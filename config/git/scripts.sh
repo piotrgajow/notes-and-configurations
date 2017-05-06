@@ -64,7 +64,7 @@ function mysqlend {
 }
 function mysql {
     checkHome "$MYSQL_HOME" || return
-    winpty "$MYSQL_HOME"/bin/mysql
+    winpty "$MYSQL_HOME"/bin/mysql "$@"
 }
 function mysqldump {
     checkHome "$MYSQL_HOME" || return
