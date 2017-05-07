@@ -11,16 +11,6 @@ function addToPath {
     test -d "$1" && export PATH="$PATH:$1$2"
 }
 
-# Git
-function git {
-	if [ "$1" == "pushu" ]
-	then
-		command git rev-parse --abbrev-ref HEAD | xargs git push -u origin
-	else
-		command git "$@"
-	fi
-}
-
 # Grails
 addToPath "$GRAILS_HOME" '/bin'
 
