@@ -8,6 +8,7 @@ function addConfigLine {
 
 addConfigLine '# Path variables'
 addConfigLine ''
+addConfigLine 'export GRADLE_HOME='
 addConfigLine 'export GRAILS_HOME='
 addConfigLine 'export GROOVY_HOME='
 addConfigLine 'export LIQUIBASE_HOME='

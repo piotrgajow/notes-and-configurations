@@ -11,6 +11,9 @@ function addToPath {
     test -d "$1" && export PATH="$PATH:$1$2"
 }
 
+# Gradle
+addToPath "$GRADLE_HOME" '/bin'
+
 # Grails
 addToPath "$GRAILS_HOME" '/bin'
 
