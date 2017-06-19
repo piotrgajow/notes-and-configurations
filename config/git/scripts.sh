@@ -11,7 +11,7 @@ function addToPath {
     test -d "$1" && export PATH="$PATH:$1$2"
 }
 function gbash {
-    /git-bash.exe &
+    /git-bash.exe
 }
 
 # Gradle
