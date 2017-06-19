@@ -10,6 +10,9 @@ function checkHome {
 function addToPath {
     test -d "$1" && export PATH="$PATH:$1$2"
 }
+function gbash {
+    /git-bash.exe
+}
 
 # Gradle
 addToPath "$GRADLE_HOME" '/bin'
