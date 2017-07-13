@@ -1,5 +1,15 @@
 [Back](../README.md)
 
+## Ifs
+
+Command | Description
+---|:---
+`-d $X$` | $X$ exists and is a directory
+`-a` | And
+`-o` | Or
+`-z $X$` | if $X$ has no value
+`-s $X$` | if x is a file and has >0 size
+
 ## Command line menu
 
 Simple menu with two choices YES and NO
