@@ -66,6 +66,8 @@ Parameter | Description
 
 `{a,b,c}1` - Creates list of string `a1`, `b1`, `c1`
 
+`Ctrl + R` - Search command in history
+
 # curl
 Data transfer using URL
 
@@ -137,5 +139,9 @@ Enable/Disable apache modules
 Enable/Disable sites from sites-available
 
 apache: apachectl a2enmod a2ensite a2dissite
+
+# Processes and ports
+
+`fuser 7000/tcp` - Find process using port 7000 for TCP
 
 [Back](../README.md)
