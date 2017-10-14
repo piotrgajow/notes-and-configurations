@@ -2,6 +2,7 @@
 
 echo 'stuff' >> ~/.gitignore
 echo 'aux' >> ~/.gitignore
+echo '.idea' >> ~/.gitignore
 
 git config --global alias.hide 'update-index --assume-unchanged'
 git config --global alias.unhide 'update-index --no-assume-unchanged'
