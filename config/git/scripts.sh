@@ -14,6 +14,9 @@ function gbash {
     start /git-bash.exe 
 }
 
+# Git
+addToPath "$GIT_SCRIPTS"
+
 # Gradle
 addToPath "$GRADLE_HOME" '/bin'
 

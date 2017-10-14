@@ -8,6 +8,7 @@ function addConfigLine {
 
 addConfigLine '# Path variables'
 addConfigLine ''
+addConfigLine 'export GIT_SCRIPTS='"$(realpath $(dirname $0))/config/git"
 addConfigLine 'export GRADLE_HOME='
 addConfigLine 'export GRAILS_HOME='
 addConfigLine 'export GROOVY_HOME='
