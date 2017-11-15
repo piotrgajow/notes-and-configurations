@@ -7,6 +7,7 @@ Contains notes regarding usefull hotkeys and commands
 * [Git](notes/git.md)
 * [MySQL](notes/mysql.md)
 * [Google searching](notes/google.md)
+* [Windows](notes/windows.md)
 
 # Configurations
 Repository for configuration files used in development tools
