@@ -15,6 +15,9 @@ function gbash {
 }
 export -f killall checkHome addToPath gbash
 
+# Git
+addToPath "$GIT_SCRIPTS"
+
 # Gradle
 addToPath "$GRADLE_HOME" '/bin'
 
