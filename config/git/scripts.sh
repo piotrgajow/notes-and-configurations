@@ -13,6 +13,7 @@ function addToPath {
 function gbash {
     start /git-bash.exe 
 }
+export -f killall checkHome addToPath gbash
 
 # Gradle
 addToPath "$GRADLE_HOME" '/bin'
@@ -48,6 +49,7 @@ function mongorestore {
     "$MONGO_HOME"/bin/mongorestore.exe --drop "$DB_DIR"
     echo "Restored mongoDB database"
 }
+export -f mongostart mongoend mongo mongorestore
 
 # MySQL
 function mysqlstart {
@@ -60,7 +62,7 @@ function mysqlend {
 }
 function mysql {
     checkHome "$MYSQL_HOME" || return
-    winpty "$MYSQL_HOME"/bin/mysql "$@"
+    winpty "$MYSQL_HOME"/bin/mysql.exe "$@"
 }
 function mysqldump {
     checkHome "$MYSQL_HOME" || return
@@ -84,6 +86,7 @@ function mysqlimport {
     winpty "$MYSQL_HOME"/bin/mysql.exe -p -u "$USER" -e "source $DUMP_FILE" "$DB"
     echo 'Import finished.'
 }
+export -f mysqlstart mysqlend mysql mysqldump mysqlimport
 
 # Node
 addToPath "$NODE_HOME"
@@ -93,14 +96,15 @@ function subl {
     checkHome "$SUBLIME_HOME" || return
     "$SUBLIME_HOME"/sublime_text.exe $@ &
 }
+export -f subl
 
 # Tomcat
 function tomcatstart {
     checkHome "$TOMCAT_HOME" || return
 	"$TOMCAT_HOME"/bin/startup.sh
 }
-
 function tomcatend {
     checkHome "$TOMCAT_HOME" || return
     "$TOMCAT_HOME"/bin/shutdown.sh
 }
+export -f tomcatstart tomcatend
