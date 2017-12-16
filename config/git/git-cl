@@ -2,7 +2,12 @@
 
 if [ $# == 1 ]
 then
-    TARGET=$1
+    if [ $1 == '-' ]
+    then
+        TARGET=@{-1}
+    else
+        TARGET=$1
+    fi
 else
     TARGET=master
 fi
