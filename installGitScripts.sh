@@ -22,3 +22,7 @@ addConfigLine 'export TOMCAT_HOME='
 addConfigLine ''
 addConfigLine 'SCRIPTS='"$SCRIPTS"
 addConfigLine 'test -f "$SCRIPTS" && . "$SCRIPTS"'
+addConfigLine ''
+addConfigLine '# Git scripts autocompletion'
+addConfigLine 'source /mingw64/share/git/completion/git-completion.bash'
+addConfigLine '_git_cl () { __gitcomp_nl "$(__git_refs)"; }'
