@@ -44,6 +44,7 @@ Hotkey                                             | Settings                   
 <kbd>Alt</kbd> + <kbd>Up</kbd>                     | Main menu > Code > Move Line Up             | Move current line up
 <kbd>Ctrl</kbd> + <kbd>W</kbd>                     | Main menu > Window > Editor Tabs > Close    | Close current window
 <kbd>Alt</kbd> + <kbd>P</kbd>                      | Main menu > View > Toggle Presentation mode | Toggle presentation mode
+<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + LMB Click       | Editor actions > Add or Remove Caret        | Toggle caret at clicked position
 
 ## Templates
 
