@@ -11,3 +11,4 @@ git config --global alias.unstage 'reset HEAD'
 git config --global alias.pushu '!git rev-parse --abbrev-ref HEAD | xargs git push -u origin'
 
 git config --global core.excludesfile '~/.gitignore'
+git config --global fetch.prune true
