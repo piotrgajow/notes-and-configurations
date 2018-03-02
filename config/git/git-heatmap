@@ -1,0 +1,10 @@
+#!/bin/bash
+
+LINES=10
+
+if [ $# == 1 ]
+then
+    LINES="$1"
+fi
+
+git log --name-status | grep -E '^[A-Z]\s+' | cut -c 3- | sort | uniq -c | sort | tail --lines=$LINES
