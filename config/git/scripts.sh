@@ -103,8 +103,10 @@ export -f subl
 function sdiff {
     checkHome "$SUBLIME_HOME" || return
     f1=`realpath $1`
+    d1=${f1:1:1}
     f2=`realpath $2`
-    "$SUBLIME_HOME"/subl.exe --command 'sbs_compare_files {"A": "'"${f1:2}"'", "B":"'"${f2:2}"'"}'
+    d2=${f2:1:1}
+    "$SUBLIME_HOME"/subl.exe --command 'sbs_compare_files {"A": "'"$d1"':'"${f1:2}"'", "B":"'"$d2"':'"${f2:2}"'"}'
 }
 export -f sdiff
 
