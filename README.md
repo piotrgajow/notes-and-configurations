@@ -29,6 +29,7 @@ Repository for configuration files used in development tools
 #### Plugins
 1. [Package control](https://packagecontrol.io/installation)
 2. [Pretty Json - Json formatter](https://github.com/dzhibas/SublimePrettyJson)
+3. [Compare Side-By-Side](https://packagecontrol.io/packages/Compare%20Side-By-Side)
 
 ### Git
 
