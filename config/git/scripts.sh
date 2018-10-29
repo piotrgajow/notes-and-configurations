@@ -27,6 +27,9 @@ addToPath "$GRAILS_HOME" '/bin'
 # Groovy
 addToPath "$GROOVY_HOME" '/bin'
 
+# Java
+addToPath "$JAVA_HOME" '/bin'
+
 # Liquibase
 addToPath "$LIQUIBASE_HOME"
 
