@@ -11,7 +11,7 @@ function addToPath {
     test -d "$1" && export PATH="$PATH:$1$2"
 }
 function gbash {
-    start /git-bash.exe 
+    start /git-bash.exe
 }
 export -f killall checkHome addToPath gbash
 
@@ -122,4 +122,8 @@ function tomcatend {
     checkHome "$TOMCAT_HOME" || return
     "$TOMCAT_HOME"/bin/shutdown.sh
 }
-export -f tomcatstart tomcatend
+function tomcatlogs {
+    checkHome "$TOMCAT_HOME" || return
+    tail -f "$TOMCAT_HOME"/logs/catalina.out
+}
+export -f tomcatstart tomcatend tomcatlogs
