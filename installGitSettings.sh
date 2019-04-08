@@ -12,7 +12,9 @@ git config --global alias.pushu '!git rev-parse --abbrev-ref HEAD | xargs git pu
 git config --global alias.ap '!git add -N . && git add -p'
 git config --global alias.st 'status'
 git config --global alias.ct 'commit'
+git config --global alias.cta 'commit --amend'
 git config --global alias.co 'checkout'
+git config --global alias.fa 'fetch --all'
 
 git config --global core.excludesfile '~/.gitignore'
 git config --global fetch.prune true
