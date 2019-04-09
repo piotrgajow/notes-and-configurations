@@ -15,6 +15,8 @@ git config --global alias.ct 'commit'
 git config --global alias.cta 'commit --amend'
 git config --global alias.co 'checkout'
 git config --global alias.fa 'fetch --all'
+git config --global alias.branch-rename 'branch -m'
+git config --global alias.branch-move 'branch -f'
 
 git config --global core.excludesfile '~/.gitignore'
 git config --global fetch.prune true
