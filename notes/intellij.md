@@ -2,6 +2,10 @@
 
 # Intellij
 
+## Plugins
+
+- String manipulation plugin
+
 ## Hotkeys
 
 ### Default
