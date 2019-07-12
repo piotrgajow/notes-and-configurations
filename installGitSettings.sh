@@ -17,6 +17,7 @@ git config --global alias.co 'checkout'
 git config --global alias.fa 'fetch --all'
 git config --global alias.branch-rename 'branch -m'
 git config --global alias.branch-move 'branch -f'
+git config --global alias.branch-cleanup 'git branch --merged | grep -v master | grep -v develop | tr "\n" " " | tr -s " " | xargs git branch -d'
 
 git config --global core.excludesfile '~/.gitignore'
 git config --global fetch.prune true
