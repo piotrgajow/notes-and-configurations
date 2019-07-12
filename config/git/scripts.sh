@@ -15,6 +15,12 @@ function gbash {
 }
 export -f killall checkHome addToPath gbash
 
+# Android
+function adb {
+    "$ANDROID_SDK_ROOT"/platform-tools/adb.exe "$@"
+}
+export -f adb
+
 # Git
 addToPath "$GIT_SCRIPTS"
 
