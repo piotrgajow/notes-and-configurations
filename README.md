@@ -8,6 +8,7 @@ Contains notes regarding usefull hotkeys and commands
 * [MySQL](notes/mysql.md)
 * [Google searching](notes/google.md)
 * [Windows](notes/windows.md)
+* [LaTeX](notex/latex.md)
 
 # Configurations
 Repository for configuration files used in development tools
