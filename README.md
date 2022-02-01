@@ -3,6 +3,7 @@ Contains notes regarding usefull hotkeys and commands
 
 * [IntelliJ Idea](notes/intellij.md)
 * [Linux](notes/linux.md)
+* [Mac](notes/mac.md)
 * [Bash](notes/bash.md)
 * [Git](notes/git.md)
 * [MySQL](notes/mysql.md)
