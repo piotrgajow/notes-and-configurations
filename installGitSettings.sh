@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo 'stuff' >> ~/.gitignore
-echo 'aux' >> ~/.gitignore
 echo '.idea' >> ~/.gitignore
 echo '__scripts__' >> ~/.gitignore
 
@@ -21,6 +19,7 @@ git config --global alias.branch-move 'branch -f'
 git config --global alias.branch-cleanup '!git branch --merged | grep -v master | grep -v develop | tr "\n" " " | tr -s " " | xargs git branch -d'
 git config --global alias.branch-cleanup-alt '!git fetch --prune && git branch -v | grep "\[gone\]" | awk "{print $1}" | xargs git branch -D'
 git config --global alias.decommit 'reset --soft HEAD~1'
+git config --global alias.rbc 'rebase --continue'
 
 git config --global core.excludesfile '~/.gitignore'
 git config --global fetch.prune true
