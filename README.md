@@ -1,5 +1,4 @@
 # Notes
-Contains notes regarding usefull hotkeys and commands
 
 * [IntelliJ Idea](notes/intellij.md)
 * [Linux](notes/linux.md)
@@ -9,7 +8,8 @@ Contains notes regarding usefull hotkeys and commands
 * [MySQL](notes/mysql.md)
 * [Google searching](notes/google.md)
 * [Windows](notes/windows.md)
-* [LaTeX](notex/latex.md)
+* [LaTeX](notes/latex.md)
+* [jq](notes/jq.md)
 
 # Configurations
 Repository for configuration files used in development tools
