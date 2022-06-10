@@ -13,6 +13,7 @@ Alias | Description
 `git fa` | Fetch all
 `git rb` | Rebase
 `git rbc` | Rebase continue
+`git rbfmi` | Fetch latest master from origin and do interactive rebase on top of it
 `git pushu` | Push with set upstream for current branch
 `git branch-rename <NEW_NAME>` | Rename branch to `<NEW_NAME>`
 `git branch-move <NAME> <HASH>` | Move branch `<NAME>` pointer to commit `<HASH>`
