@@ -7,6 +7,7 @@ Repository for storing my personal notes, configuration files and other things I
 - [Bash](./programming-languages/bash/index.md)
 - [Git](./tools/git/index.md)
 - [IntelliJ](./tools/intellij/index.md)
+- [JavaScript](./programming-languages/javascript)
 - [JQ](./tools/jq/index.md)
 - [LaTeX](./tools/latex/index.md)
 - [Linux](./operating-systems/linux/index.md)
