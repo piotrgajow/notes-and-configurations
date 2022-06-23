@@ -80,6 +80,12 @@ resource "aws_lambda_function" "<NAME>" {
   handler          = "index.handler"
   filename         = data.archive_file.<NAME>.output_path
   source_code_hash = filebase64sha256(data.archive_file.<NAME>.output_path)
+
+  environment {
+    variables = {
+      EMAIL_ADDRESS = aws_ses_email_identity.<NAME>.email
+    }
+  }
 }
 ```
 
@@ -91,8 +97,7 @@ const CHARSET = 'UTF-8';
 // If this was triggered from API gateway, `event.body` contains stringified HTTP request body
 exports.handler = async (event) => {
     const emailParameters = {
-        // Email address from which the mail will be sent
-        Source: '',
+        Source: process.env.EMAIL_ADDRESS,
         Destination: {
             // Email addresses to which the mail will be sent
             ToAddresses: [''],
