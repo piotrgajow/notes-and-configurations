@@ -4,6 +4,7 @@ Repository for storing my personal notes, configuration files and other things I
 
 ## Tech
 
+- [AWS](./tools/aws/index.md)
 - [Bash](./programming-languages/bash/index.md)
 - [Git](./tools/git/index.md)
 - [IntelliJ](./tools/intellij/index.md)
@@ -14,6 +15,7 @@ Repository for storing my personal notes, configuration files and other things I
 - [MacOS](./operating-systems/mac-os/index.md)
 - [MySQL](./databases/mysql/index.md)
 - [Sublime Text](./tools/sublime-text/index.md)
+- [Terraform](./tools/terraform/index.md)
 - [TypeScript](./programming-languages/typescript/index.md)
 - [Windows](./operating-systems/windows/index.md)
 
