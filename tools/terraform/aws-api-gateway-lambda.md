@@ -20,6 +20,9 @@ provider "aws" {
 resource "aws_apigatewayv2_api" "<NAME>" {
   name          = "<NAME>"
   protocol_type = "HTTP"
+  cors_configuration = {
+    allow_origins = "<CORS_DOMAIN>"
+  }
 }
 
 # Define cloudwatch settings for API

@@ -105,11 +105,15 @@ exports.handler = async (event) => {
         Message: {
             Body: {
                 // Body of the email
-                // Can be `Text` instead of `Html`
+                // Can be either `Text` or `Html`
+                Text: {
+                    Data: '',
+                    Charset: CHARSET,
+                },
                 Html: {
                     Data: '',
                     Charset: CHARSET,
-                }
+                },
             },
             Subject: {
                 // Email subject
