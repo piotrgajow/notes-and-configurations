@@ -2,6 +2,14 @@
 
 [Explain Shell webpage](http://explainshell.com/)
 
+## Terminal
+
+### Prompt
+
+| Shell | Setting                                                  |
+|:------|:---------------------------------------------------------|
+| ZSH   | export PROMPT='%F{green}%n@%m%f %F{yellow}%d%f'$'\n''$ ' |
+
 ## Hotkeys
 
 Hotkey | Description
