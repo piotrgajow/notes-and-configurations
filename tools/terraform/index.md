@@ -7,16 +7,16 @@
 
 ## Commands
 
-Command | Description
----:|:---
-`terraform init` | Initialize directory, download providers
-`terraform init -upgrade` | Update directory, download new providers
-`terraform fmt` | Format configuration file
-`terraform validate` | Validate configuration file
-`terraform plan` | Preview changes to be done via `apply`
-`terraform apply` | Applies configuration
-`terraform show` | Show data (IDs and properties) related to running instances
-`terraform destroy` | Removes running instances created during `apply`
+| Command                   | Description                                                 |
+|:--------------------------|:------------------------------------------------------------|
+| `terraform init`          | Initialize directory, download providers                    |
+| `terraform init -upgrade` | Update directory, download new providers                    |
+| `terraform fmt`           | Format configuration file                                   |
+| `terraform validate`      | Validate configuration file                                 |
+| `terraform plan`          | Preview changes to be done via `apply`                      |
+| `terraform apply`         | Applies configuration                                       |
+| `terraform show`          | Show data (IDs and properties) related to running instances |
+| `terraform destroy`       | Removes running instances created during `apply`            |
 
 ## Snippets
 

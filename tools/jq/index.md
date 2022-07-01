@@ -4,9 +4,9 @@
 
 ## Options
 
-Option | Description
----:|:---
-`-s` | Load multiple files into json array
+| Option | Description                         |
+|:-------|:------------------------------------|
+| `-s`   | Load multiple files into json array |
 
 ## Example usage
 

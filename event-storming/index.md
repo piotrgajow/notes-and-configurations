@@ -28,19 +28,19 @@ Chaotic Exploration:
 
 ## Notation
 
-Name | Representation | Description
----|---|---
-Event | Orange | Relevant to the domain experts, written at past tense
-Hot Spot | Red, 45 degree rotation | Problems, risks, uncertainties, questions, doubts
-Actor | Yellow, rectangle | Person related with the event
-External System | Pink | External system relevant in the process
-Gain | Green, rectangle | What can be gained in terms of money, user satisfaction etc.
-Loss | Red, rectangle | What is potentially lost in terms of money, user satisfactio etc.
-Note | White | Other notes, dictionaries etc.
-Command | Blue | Instruction issued for the system made by some actor, external system or Policy
-Read Model | Green | View with data available for an actor to make a decision when issuing commands
-Policy | violet | Rules explaining how to react to certain events (or commands?)
-Aggregate | Yellow | Entity that controls the business rules and invariants
+| Name            | Representation          | Description                                                                     |
+|:----------------|:------------------------|:--------------------------------------------------------------------------------|
+| Event           | Orange                  | Relevant to the domain experts, written at past tense                           |
+| Hot Spot        | Red, 45 degree rotation | Problems, risks, uncertainties, questions, doubts                               |
+| Actor           | Yellow, rectangle       | Person related with the event                                                   |
+| External System | Pink                    | External system relevant in the process                                         |
+| Gain            | Green, rectangle        | What can be gained in terms of money, user satisfaction etc.                    |
+| Loss            | Red, rectangle          | What is potentially lost in terms of money, user satisfactio etc.               |
+| Note            | White                   | Other notes, dictionaries etc.                                                  |
+| Command         | Blue                    | Instruction issued for the system made by some actor, external system or Policy |
+| Read Model      | Green                   | View with data available for an actor to make a decision when issuing commands  |
+| Policy          | violet                  | Rules explaining how to react to certain events (or commands?)                  |
+| Aggregate       | Yellow                  | Entity that controls the business rules and invariants                          |
 
 ## Steps
 

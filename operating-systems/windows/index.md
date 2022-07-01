@@ -2,9 +2,9 @@
 
 ## Hotkeys
 
-Hotkey | Description
----|:---
-<kbd>Shift</kbd> + <kbd>F10</kbd> | Simulate right mouse click
+| Hotkey                            | Description                |
+|:----------------------------------|:---------------------------|
+| <kbd>Shift</kbd> + <kbd>F10</kbd> | Simulate right mouse click |
 
 ## Git Bash
 

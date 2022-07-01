@@ -2,12 +2,12 @@
 
 ## User management
 
-Command | Description
----:|:---
-`CREATE USER '<USER>'@'<HOST>'` | Create passwordless user
-`CREATE USER '<USER>'@'<HOST>' IDENTIFIED BY '<PASSWORD>'` | Create user with password given by text
-`CREATE USER '<USER>'@'<HOST>' IDENTIFIED BY PASSWORD '<PASSWORD>'` | Create user with password given by hash
-`GRANT <PRIVILEGE> ON <OBJECT_TYPE + OBJECT> TO '<USER>'@'<HOST>'` | Grant user access to given resource (database, table etc)
+| Command                                                             | Description                                               |
+|:--------------------------------------------------------------------|:----------------------------------------------------------|
+| `CREATE USER '<USER>'@'<HOST>'`                                     | Create passwordless user                                  |
+| `CREATE USER '<USER>'@'<HOST>' IDENTIFIED BY '<PASSWORD>'`          | Create user with password given by text                   |
+| `CREATE USER '<USER>'@'<HOST>' IDENTIFIED BY PASSWORD '<PASSWORD>'` | Create user with password given by hash                   |
+| `GRANT <PRIVILEGE> ON <OBJECT_TYPE + OBJECT> TO '<USER>'@'<HOST>'`  | Grant user access to given resource (database, table etc) |
 
 ## Configuration
 

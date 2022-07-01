@@ -12,48 +12,48 @@
 
 ## Hotkeys
 
-Hotkey | Description
----:|:---
-<kbd>Ctrl</kbd> + <kbd>R</kbd> | Search in command history
-<kbd>Ctrl</kbd> + <kbd>L</kbd> | Clear terminal window
-<kbd>Ctrl</kbd> + <kbd>U</kbd> | Copies current command into clipboard
-<kbd>Ctrl</kbd> + <kbd>Y</kbd> | Pastes command from clipboard
-<kbd>Ctrl</kbd> + <kbd>A</kbd> | Sets cursor at the beginning of the line
-<kbd>Ctrl</kbd> + <kbd>E</kbd> | Sets cursor at the end of the line
-<kbd>Ctrl</kbd> + <kbd>K</kbd> | Removes text after cursor
-<kbd>Alt</kbd> + <kbd>Backspace</kbd> | Removes last word
+| Hotkey                                | Description                              |
+|:--------------------------------------|:-----------------------------------------|
+| <kbd>Ctrl</kbd> + <kbd>R</kbd>        | Search in command history                |
+| <kbd>Ctrl</kbd> + <kbd>L</kbd>        | Clear terminal window                    |
+| <kbd>Ctrl</kbd> + <kbd>U</kbd>        | Copies current command into clipboard    |
+| <kbd>Ctrl</kbd> + <kbd>Y</kbd>        | Pastes command from clipboard            |
+| <kbd>Ctrl</kbd> + <kbd>A</kbd>        | Sets cursor at the beginning of the line |
+| <kbd>Ctrl</kbd> + <kbd>E</kbd>        | Sets cursor at the end of the line       |
+| <kbd>Ctrl</kbd> + <kbd>K</kbd>        | Removes text after cursor                |
+| <kbd>Alt</kbd> + <kbd>Backspace</kbd> | Removes last word                        |
 
 ## Commands
 
-Command | Description
----:|:---
-`ln -s <x> <y>` | Create a symbolic link where path `<X>` points to `<Y>`
-`sort -n` | Sort by numeric value
-`sort -r` | Sort in reverse order
-`uniq` | Remove duplicate lines from a file (requires the file to be sorted first)
-`uniq -c` | Count the number of line occurrences in a file (requires the file to be sorted first)
-`cut -c<N>-<M>` | Cut characters located at position from `<N>` to `<M>`
-`cut -d'<X>' -fN` | Cur `<N>`'th element of string after splitting by delimiter `<X>`
-`wc` | Count number of words
-`tar -xzf` | Extract tar archive
-`gunzip` | Extract .gz file
-`df -h` | File system disk usage in A human readable format
-`crontab -l` | Show crontab rules configuration
-`crontab -e` | Open crontab rules for editing
-`sudo service cron reload` | Reload cron service with updated rules
-`grep -v` | Reverse matching / select lines not containing argument
-`grep -e <PATTERN>` | Add additional `<PATTERN>` to the search (OR)
-`grep -c` | Count occurrences
-`grep -n` | Prefix each line with line number
-`grep -A <X>` | Print `<X>` lines after found line
-`grep -B <X>` | Print `<X>` lines before found line
-`grep -C <X>` | Print `<X>` lines before and after line
-`fuser <PORT>/tcp` | Find process using port `<PORT>` for TCP
-`free` | Display memory usage in the system
-`free -m` | Display memory usage in the system using MiB units
-`printenv` | Print environment variables
-`uname` | Print system information
-`uname -a` | Print all system information
+| Command                    | Description                                                                           |
+|:---------------------------|:--------------------------------------------------------------------------------------|
+| `ln -s <x> <y>`            | Create a symbolic link where path `<X>` points to `<Y>`                               |
+| `sort -n`                  | Sort by numeric value                                                                 |
+| `sort -r`                  | Sort in reverse order                                                                 |
+| `uniq`                     | Remove duplicate lines from a file (requires the file to be sorted first)             |
+| `uniq -c`                  | Count the number of line occurrences in a file (requires the file to be sorted first) |
+| `cut -c<N>-<M>`            | Cut characters located at position from `<N>` to `<M>`                                |
+| `cut -d'<X>' -fN`          | Cur `<N>`'th element of string after splitting by delimiter `<X>`                     |
+| `wc`                       | Count number of words                                                                 |
+| `tar -xzf`                 | Extract tar archive                                                                   |
+| `gunzip`                   | Extract .gz file                                                                      |
+| `df -h`                    | File system disk usage in A human readable format                                     |
+| `crontab -l`               | Show crontab rules configuration                                                      |
+| `crontab -e`               | Open crontab rules for editing                                                        |
+| `sudo service cron reload` | Reload cron service with updated rules                                                |
+| `grep -v`                  | Reverse matching / select lines not containing argument                               |
+| `grep -e <PATTERN>`        | Add additional `<PATTERN>` to the search (OR)                                         |
+| `grep -c`                  | Count occurrences                                                                     |
+| `grep -n`                  | Prefix each line with line number                                                     |
+| `grep -A <X>`              | Print `<X>` lines after found line                                                    |
+| `grep -B <X>`              | Print `<X>` lines before found line                                                   |
+| `grep -C <X>`              | Print `<X>` lines before and after line                                               |
+| `fuser <PORT>/tcp`         | Find process using port `<PORT>` for TCP                                              |
+| `free`                     | Display memory usage in the system                                                    |
+| `free -m`                  | Display memory usage in the system using MiB units                                    |
+| `printenv`                 | Print environment variables                                                           |
+| `uname`                    | Print system information                                                              |
+| `uname -a`                 | Print all system information                                                          |
 
 ## Crontab rules
 
@@ -79,15 +79,15 @@ Redirect all output into a `<FILE>>`
 
 # Vim
 
-Command | Description
----:|:---
-`:%s/A/B/gc` | Replace A with B in the whole file with confirmation
-`u` | Undo change
-`v` | Select characters
-`V` | Select lines
-`d` | Cut selected
-`y` | Copy selected
-`P` | Paste before cursor
-`p` | Paste after cursor
+| Command      | Description                                          |
+|:-------------|:-----------------------------------------------------|
+| `:%s/A/B/gc` | Replace A with B in the whole file with confirmation |
+| `u`          | Undo change                                          |
+| `v`          | Select characters                                    |
+| `V`          | Select lines                                         |
+| `d`          | Cut selected                                         |
+| `y`          | Copy selected                                        |
+| `P`          | Paste before cursor                                  |
+| `p`          | Paste after cursor                                   |
 
 [Back](../../README.md)

@@ -4,11 +4,12 @@
 
 ### Text formatting
 
-Command | Description
----:|:---
-`\centering` <br> `\begin{center} ... \end{center}` | Center content
-`\textbf{...}` | Bold text
-`\tiny` `\small` `\normalsize` <br> `\large` `\LARGE` `\huge` `\HUGE` | Set font size
+| Command                                                               | Description    |
+|:----------------------------------------------------------------------|:---------------|
+| `\centering` <br> `\begin{center} ... \end{center}`                   | Center content |
+| `\textbf{...}`                                                        | Bold text      |
+| `\tiny` `\small` `\normalsize` <br> `\large` `\LARGE` `\huge` `\HUGE` | Set font size  |
+
 `\noindent`
 
 ## Tables
