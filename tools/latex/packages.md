@@ -1,3 +1,5 @@
+[Back](./index.md)
+
 ## Packages
 
 ### Geometry [🔗](https://ctan.org/pkg/geometry)
@@ -52,3 +54,41 @@ Handles cross-referencing commands to produce hypertext links in the document.
 ```
 
 ---
+
+### fancyhdr [🔗](https://ctan.org/pkg/fancyhdr)
+
+Setup custom headers and footers. Usage manual is described in [the user manual](https://sunsite.icm.edu.pl/pub/CTAN/macros/latex/contrib/fancyhdr/fancyhdr.pdf).
+
+```latex
+\usepackage{fancyhdr}
+```
+
+---
+
+### color [🔗](https://ctan.org/pkg/color)
+
+Allows defining colors.
+
+```latex
+\usepackage{color}
+
+\definecolor{ColorName}{RGB}{10,50,255}
+```
+
+---
+
+### pagecolor [🔗](https://ctan.org/pkg/pagecolor)
+
+Allows setting background color for pages.
+Requires `color` package to be loaded first
+
+```latex
+\usepackage{color}
+\usepackage{pagecolor}
+
+\pagecolor{ColorName}
+```
+
+---
+
+[Back](./index.md)

@@ -1,5 +1,7 @@
 [Back](../../README.md)
 
+[Packages](./packages.md)
+
 ## Distribution
 
 [TeX Live](https://www.tug.org/texlive/)
@@ -41,11 +43,14 @@ Processes `.tex` file and automatically installs missing dependencies.
 
 ### Text formatting
 
-| Command                                                               | Description    |
-|:----------------------------------------------------------------------|:---------------|
-| `\centering` <br> `\begin{center} ... \end{center}`                   | Center content |
-| `\textbf{...}`                                                        | Bold text      |
-| `\tiny` `\small` `\normalsize` <br> `\large` `\LARGE` `\huge` `\HUGE` | Set font size  |
+| Command                                                               | Description                                                                                   |
+|:----------------------------------------------------------------------|:----------------------------------------------------------------------------------------------|
+| `\centering` <br> `\begin{center} ... \end{center}`                   | Center content                                                                                |
+| `\raggedright`                                                        | Align left content                                                                            | 
+| `\textbf{...}`                                                        | Bold text                                                                                     |
+| `\underline{...}`                                                     | Underline text                                                                                |
+| `\tiny` `\small` `\normalsize` <br> `\large` `\LARGE` `\huge` `\HUGE` | Set font size                                                                                 |
+| `\fontsize{FONTSIZE}{BASELINESKIPSIZE}\selectfont`                    | Set arbitrary font size (baselineskip is distance between lines, should be ~1.2 size usually) |
 
 `\noindent`
 
@@ -79,6 +84,34 @@ Processes `.tex` file and automatically installs missing dependencies.
     \hline
 \end{tabularx}
 ```
+
+### Listings
+
+Unordered list, with specified distance between the items
+
+```latex
+\begin{itemize}
+  \setlength{\itemsep}{5pt}
+  \item item1
+  \item item2
+  \item item3
+\end{itemize}
+```
+
+### Layout
+
+| Command                                           | Description                                                           |
+|:--------------------------------------------------|:----------------------------------------------------------------------|
+| `\begin{minipage}{\textwidth} ... \end{minipage}` | Creates content block (full width) that will be kept on a single page |
+| `\setlength{\parindent}{SIZE}`                    | Set paragraph indendation size                                        |
+| `\setlength{\parskip}{10pt}`                      | Set distance between paragraph                                        |
+
+### Page numbering
+
+| Command               | Description                                                      |
+|:----------------------|:-----------------------------------------------------------------|
+| `\thepage`            | Index of current page                                            |
+| `\pageref{LabelName}` | Index of page where corresponding `\label{LabelName}` is located |
 
 ### Defining command
 
