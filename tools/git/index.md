@@ -100,14 +100,15 @@ _git_cl () { __gitcomp_nl "$(__git_refs)"; }
 ## Configuration
 
 ### Global gitignore settings
-Create `.gitignore` file in user home with exclusions configured
-```
-echo '.idea' >> ~/.gitignore
-echo '__scripts__' >> ~/.gitignore
-```
 
-Set up the file in git as global .gitignore
+Create global `.gitignore` file in user home with exclusions configured
 ```
+touch ~/.gitignore
+echo '__scripts__' >> ~/.gitignore
+echo '__notes__' >> ~/.gitignore
+echo '__stuff__' >> ~/.gitignore
+echo '.idea' >> ~/.gitignore
+echo '.DS_Store' >> ~/.gitignore
 git config --global core.excludesfile '~/.gitignore'
 ```
 
@@ -123,5 +124,26 @@ git config --global core.excludesfile '~/.gitignore'
 - Start ssh-agent `eval "$(ssh-agent -s)"`
 - Ass ssh key to ssh-agent `ssh-add <FILE_NAME>`
 - Add public key (content of `<FILE_NAME>.pub) to remote repository account
+- Add entry to `~/.ssh/config` file
+
+  ```
+  Host <CUSTOM_HOST_ALIAS>
+  HostName <HOSTNAME>
+  IdentityFile <PATH_TO_PRIVATE_KEY_FILE>
+  ```
+  e.g.
+  ```
+  Host private-github
+  HostName github.com
+  IdentityFile ~/.ssh/private-github
+  ```
+  And then the remote origin url should contain the `<CUSTOM_HOST_ALIAS>` e.g. `git@private-github:piotrgajow/repo.git` instead of `git@github.com:piotrgajow/repo.git`
+
+#### Base config file
+
+```
+Host *
+AddKeysToAgent yes
+```
 
 [Back](../../README.md)
