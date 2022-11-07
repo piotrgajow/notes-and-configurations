@@ -21,11 +21,32 @@
 | `-z <VAR>` | if `<VAR>` has no value                        |
 | `-s <VAR>` | if `<VAR>` is a file and has >0 size           |
 
-## Command line menu
+## Snippets
+
+If argument not set exit
+
+```bash
+if [[ -z $1 ]]
+then
+  echo 'Error message'
+  exit 1
+fi
+```
+
+---
+
+Execute a command `cmd`, show stdout normally in the console and also put it into a variable `RES`
+
+```bash
+RES=(cmd | tee /dev/tty)
+
+```
+
+---
 
 A simple menu with two choices YES and NO
 
-```
+```bash
 select YN in 'YES' 'NO'
 do
     case $YN in
