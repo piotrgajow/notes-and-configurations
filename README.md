@@ -29,3 +29,4 @@ Repository for storing my personal notes, configuration files and other things I
 
 - [Agile](./agile/index.md)
 - [Soft Skills](./soft-skills/index.md)
+- [Other](./other/index.md)
