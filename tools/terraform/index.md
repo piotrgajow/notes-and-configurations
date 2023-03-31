@@ -18,6 +18,8 @@
 | `terraform show`          | Show data (IDs and properties) related to running instances |
 | `terraform destroy`       | Removes running instances created during `apply`            |
 
+Terraform uses files found in the working directory. To change the path `-chdir=` parameter can be used to pass with custom directory.
+
 ## Snippets
 
 - [AWS - sending emails with lambda and SES](./aws-lambda-sending-mail.md)
