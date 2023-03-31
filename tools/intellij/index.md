@@ -1,5 +1,10 @@
 [Back](../../README.md)
 
+## Hotkeys
+
+- [Windows](./hotkeys-windows.md)
+- [Mac](./hotkeys-mac.md)
+
 ## Live Templates
 
 Snippet | Description
