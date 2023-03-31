@@ -7,6 +7,8 @@
 | `$SELECTION$` | Body of the selected text (for surround templates) |
 |       `$END$` | Puts cursor here at the end                        |
 
+- [My templates](./live-templates.md)
+
 ## Other
 
 |                        Option | Description                                     |
