@@ -6,6 +6,7 @@ Repository for storing my personal notes, configuration files and other things I
 
 - [AWS](./tools/aws/index.md)
 - [Bash](./programming-languages/bash/index.md)
+- [CSS](./programming-languages/css/index.md)
 - [Docker](./tools/docker/index.md)
 - [Git](./tools/git/index.md)
 - [IntelliJ](./tools/intellij/index.md)
