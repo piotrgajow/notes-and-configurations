@@ -47,6 +47,8 @@
 | `uname`                    | Print system information                                                                     |
 | `uname -a`                 | Print all system information                                                                 |
 | `xargs <CMD>`              | Used in pipes to run `<CMD>` for each output of previous command                             |
+| `xargs -I{} <CMD>`         | Allows to place input in position of `{}` within `<CMD>`                                     |
+| `xargs -P <N> <CMD>`       | Runs the `<CMD>` commands in parallel in max `<N>` processes (0 = as many as possible        | 
 | `lsof -i tcp:<PORT>`       | Find process that is running on TCP port `<PORT>`                                            |
 | `lsof -F <PARAMS>`         | Runs `lsof <PARAMS>` command which output will be suited for further processing (e.g. pipes) |
 | `kill -9 <PID>`            | Kills process with given `<PID>`                                                             |
