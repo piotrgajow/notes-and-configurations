@@ -1,6 +1,7 @@
 [Back](./index.md)
 
 ```javascript
+// Draw rectangle with rounded corners
 function rectangleRoundedPath(width: number, height: number, radius: number): Path2D {
   const path = new Path2D();
   path.moveTo(radius, 0);
