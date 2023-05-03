@@ -1,13 +1,16 @@
 [Back](../../README.md)
 
-## Types vs Interfaces
+## Resources
 
-Interfaces
-- allow declaration merging
-- has to have statically known members
-- faster compilation (cached)
+- Interface vs Type
+    - [Microsoft TS wiki](https://github.com/microsoft/TypeScript/wiki/Performance#preferring-interfaces-over-intersections)
+    - [Google TS styleguide](https://google.github.io/styleguide/tsguide.html#interfaces-vs-type-aliases)
+- Namespaces / global types
+    - [Microsoft TS wiki](https://github.com/microsoft/TypeScript/wiki/Performance#isolated-file-emit)
+    - [Google TS styleguide](https://github.com/microsoft/TypeScript/wiki/Performance#isolated-file-emit)
+    - [TS repository](https://github.com/microsoft/TypeScript/issues/30994#issuecomment-492017219)
 
-## Snippets
+## Code snippets
 
 ```typescript
 // exhaustiveness check method for switch type checks
