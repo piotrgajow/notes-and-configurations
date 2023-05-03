@@ -52,6 +52,7 @@
 | `lsof -i tcp:<PORT>`       | Find process that is running on TCP port `<PORT>`                                            |
 | `lsof -F <PARAMS>`         | Runs `lsof <PARAMS>` command which output will be suited for further processing (e.g. pipes) |
 | `kill -9 <PID>`            | Kills process with given `<PID>`                                                             |
+| `bash -c <CMD>`            | Runs `<CMD>` given by string in a subshell                                                   |
 
 ## Config
 
