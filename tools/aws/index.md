@@ -28,4 +28,17 @@ Tool for secure storage of AWS IAM credentials
 - `aws-vault login <PROFILE>` - open AWS in browser logged into `<PROFILE>`
 - `aws-vault list` - list all profiles & credentials
 
+## CloudWatch
+
+### Logs Insights
+
+- Counting occurrences per time unit based on message text
+
+  e.g. Counts occurrences of "Retrying" log per 30 minutes
+  ```
+  fields @timestamp, @message, @logStream, @log
+  | filter @message like /Retrying/
+  | stats count() by bin(30m)
+  ```
+
 [Back](../../README.md)
