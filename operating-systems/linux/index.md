@@ -17,42 +17,43 @@
 
 ## Commands
 
-| Command                    | Description                                                                                  |
-|:---------------------------|:---------------------------------------------------------------------------------------------|
-| `ln -s <x> <y>`            | Create a symbolic link where path `<X>` points to `<Y>`                                      |
-| `sort -n`                  | Sort by numeric value                                                                        |
-| `sort -r`                  | Sort in reverse order                                                                        |
-| `uniq`                     | Remove duplicate lines from a file (requires the file to be sorted first)                    |
-| `uniq -c`                  | Count the number of line occurrences in a file (requires the file to be sorted first)        |
-| `cut -c<N>-<M>`            | Cut characters located at position from `<N>` to `<M>`                                       |
-| `cut -d'<X>' -fN`          | Cur `<N>`'th element of string after splitting by delimiter `<X>`                            |
-| `wc`                       | Count number of words                                                                        |
-| `tar -xzf`                 | Extract tar archive                                                                          |
-| `gunzip`                   | Extract .gz file                                                                             |
-| `df -h`                    | File system disk usage in A human readable format                                            |
-| `crontab -l`               | Show crontab rules configuration                                                             |
-| `crontab -e`               | Open crontab rules for editing                                                               |
-| `sudo service cron reload` | Reload cron service with updated rules                                                       |
-| `grep -v`                  | Reverse matching / select lines not containing argument                                      |
-| `grep -e <PATTERN>`        | Add additional `<PATTERN>` to the search (OR)                                                |
-| `grep -c`                  | Count occurrences                                                                            |
-| `grep -n`                  | Prefix each line with line number                                                            |
-| `grep -A <X>`              | Print `<X>` lines after found line                                                           |
-| `grep -B <X>`              | Print `<X>` lines before found line                                                          |
-| `grep -C <X>`              | Print `<X>` lines before and after line                                                      |
-| `fuser <PORT>/tcp`         | Find process using port `<PORT>` for TCP                                                     |
-| `free`                     | Display memory usage in the system                                                           |
-| `free -m`                  | Display memory usage in the system using MiB units                                           |
-| `printenv`                 | Print environment variables                                                                  |
-| `uname`                    | Print system information                                                                     |
-| `uname -a`                 | Print all system information                                                                 |
-| `xargs <CMD>`              | Used in pipes to run `<CMD>` for each output of previous command                             |
-| `xargs -I{} <CMD>`         | Allows to place input in position of `{}` within `<CMD>`                                     |
-| `xargs -P <N> <CMD>`       | Runs the `<CMD>` commands in parallel in max `<N>` processes (0 = as many as possible        | 
-| `lsof -i tcp:<PORT>`       | Find process that is running on TCP port `<PORT>`                                            |
-| `lsof -F <PARAMS>`         | Runs `lsof <PARAMS>` command which output will be suited for further processing (e.g. pipes) |
-| `kill -9 <PID>`            | Kills process with given `<PID>`                                                             |
-| `bash -c <CMD>`            | Runs `<CMD>` given by string in a subshell                                                   |
+| Command                    | Description                                                                                    |
+|:---------------------------|:-----------------------------------------------------------------------------------------------|
+| `bash -c <CMD>`            | Runs `<CMD>` given by string in a subshell                                                     |
+| `crontab -l`               | Show crontab rules configuration                                                               |
+| `crontab -e`               | Open crontab rules for editing                                                                 |
+| `cut -c<N>-<M>`            | Cut characters located at position from `<N>` to `<M>`                                         |
+| `cut -d'<X>' -fN`          | Cur `<N>`'th element of string after splitting by delimiter `<X>`                              |
+| `df -h`                    | File system disk usage in A human readable format                                              |
+| `find <P> -type <X>`       | Find files of type `<X>` (d - directory, f - file, l -symbolic link, s - socket) in path `<P>` |
+| `free`                     | Display memory usage in the system                                                             |
+| `free -m`                  | Display memory usage in the system using MiB units                                             |
+| `fuser <PORT>/tcp`         | Find process using port `<PORT>` for TCP                                                       |
+| `grep -v`                  | Reverse matching / select lines not containing argument                                        |
+| `grep -e <PATTERN>`        | Add additional `<PATTERN>` to the search (OR)                                                  |
+| `grep -c`                  | Count occurrences                                                                              |
+| `grep -n`                  | Prefix each line with line number                                                              |
+| `grep -A <X>`              | Print `<X>` lines after found line                                                             |
+| `grep -B <X>`              | Print `<X>` lines before found line                                                            |
+| `grep -C <X>`              | Print `<X>` lines before and after line                                                        |
+| `gunzip`                   | Extract .gz file                                                                               |
+| `kill -9 <PID>`            | Kills process with given `<PID>`                                                               |
+| `ln -s <x> <y>`            | Create a symbolic link where path `<X>` points to `<Y>`                                        |
+| `lsof -i tcp:<PORT>`       | Find process that is running on TCP port `<PORT>`                                              |
+| `lsof -F <PARAMS>`         | Runs `lsof <PARAMS>` command which output will be suited for further processing (e.g. pipes)   |
+| `printenv`                 | Print environment variables                                                                    |
+| `sudo service cron reload` | Reload cron service with updated rules                                                         |
+| `sort -n`                  | Sort by numeric value                                                                          |
+| `sort -r`                  | Sort in reverse order                                                                          |
+| `tar -xzf`                 | Extract tar archive                                                                            |
+| `uname`                    | Print system information                                                                       |
+| `uname -a`                 | Print all system information                                                                   |
+| `uniq`                     | Remove duplicate lines from a file (requires the file to be sorted first)                      |
+| `uniq -c`                  | Count the number of line occurrences in a file (requires the file to be sorted first)          |
+| `wc`                       | Count number of words                                                                          |
+| `xargs <CMD>`              | Used in pipes to run `<CMD>` for each output of previous command                               |
+| `xargs -I{} <CMD>`         | Allows to place input in position of `{}` within `<CMD>`                                       |
+| `xargs -P <N> <CMD>`       | Runs the `<CMD>` commands in parallel in max `<N>` processes (0 = as many as possible          |
 
 ## Config
 
