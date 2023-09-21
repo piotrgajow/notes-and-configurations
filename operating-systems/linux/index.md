@@ -41,6 +41,7 @@
 | `ln -s <x> <y>`            | Create a symbolic link where path `<X>` points to `<Y>`                                        |
 | `lsof -i tcp:<PORT>`       | Find process that is running on TCP port `<PORT>`                                              |
 | `lsof -F <PARAMS>`         | Runs `lsof <PARAMS>` command which output will be suited for further processing (e.g. pipes)   |
+| `mkdir -p <D>`             | Create directory `<D>` if it does not exist                                                    |
 | `printenv`                 | Print environment variables                                                                    |
 | `sudo service cron reload` | Reload cron service with updated rules                                                         |
 | `sort -n`                  | Sort by numeric value                                                                          |
