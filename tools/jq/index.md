@@ -4,9 +4,10 @@
 
 ## Options
 
-| Option | Description                         |
-|:-------|:------------------------------------|
-| `-s`   | Load multiple files into json array |
+| Option | Description                                                  |
+|:-------|:-------------------------------------------------------------|
+| `-s`   | Load multiple files into json array                          |
+| `-r`   | Raw output - new line delimiter & remove quotes from strings |
 
 ## Example usage
 
@@ -27,6 +28,18 @@ jq -s '.[1]."prop-name" = .[0]."prop-name" | .[1]' from.json to.json > result.js
 ```
 
 Uses `-s` option to load multiple files into json array, perform assignment of value to second one based on the first one, and select the second one for output
+
+## Filter array property
+
+```
+jq '.path.to.array = (.path.to.array | map(select(condition)))' source.json > result.json
+```
+
+E.g.
+
+```
+jq '.logStreams = (.logStreams | map(select(.lastEventTimestamp > 1695195892000)))' source.json > result.json
+```
 
 
 [Back](../../README.md)
