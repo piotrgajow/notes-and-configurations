@@ -23,7 +23,7 @@
 | `crontab -l`               | Show crontab rules configuration                                                               |
 | `crontab -e`               | Open crontab rules for editing                                                                 |
 | `cut -c<N>-<M>`            | Cut characters located at position from `<N>` to `<M>`                                         |
-| `cut -d'<X>' -fN`          | Cur `<N>`'th element of string after splitting by delimiter `<X>`                              |
+| `cut -d'<X>' -fN`          | Cur `<N>`'th element of string after splitting by delimiter `<X>` (instead of tab)             |
 | `df -h`                    | File system disk usage in A human readable format                                              |
 | `find <P> -type <X>`       | Find files of type `<X>` (d - directory, f - file, l -symbolic link, s - socket) in path `<P>` |
 | `free`                     | Display memory usage in the system                                                             |
@@ -42,6 +42,7 @@
 | `lsof -i tcp:<PORT>`       | Find process that is running on TCP port `<PORT>`                                              |
 | `lsof -F <PARAMS>`         | Runs `lsof <PARAMS>` command which output will be suited for further processing (e.g. pipes)   |
 | `mkdir -p <D>`             | Create directory `<D>` if it does not exist                                                    |
+| `mktemp`                   | Create temporary file and return path to it                                                    |
 | `printenv`                 | Print environment variables                                                                    |
 | `sudo service cron reload` | Reload cron service with updated rules                                                         |
 | `sort -n`                  | Sort by numeric value                                                                          |
