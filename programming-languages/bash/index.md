@@ -35,6 +35,17 @@ fi
 
 ---
 
+For loops
+
+```bash
+for VAR in "${ARRAY[@]}"
+  do
+    ...
+  done
+```
+
+---
+
 Execute a command `cmd`, show stdout normally in the console and also put it into a variable `RES`
 
 ```bash
