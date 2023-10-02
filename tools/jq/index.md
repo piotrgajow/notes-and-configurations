@@ -41,5 +41,12 @@ E.g.
 jq '.logStreams = (.logStreams | map(select(.lastEventTimestamp > 1695195892000)))' source.json > result.json
 ```
 
+## Transform object to array
+
+Converting object to array of { key, value } objects
+
+```
+jq 'to_entries' source.json
+```
 
 [Back](../../README.md)
