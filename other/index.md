@@ -1,5 +1,9 @@
 [Back](../../README.md)
 
+## Programming resources
+
+- [Tomasz Ducin - repository with valuable resources](https://github.com/ducin/awesomes)
+
 ## Various Links
 
 - [Richard Feynman - FUN TO IMAGINE](https://youtu.be/nYg6jzotiAc)
