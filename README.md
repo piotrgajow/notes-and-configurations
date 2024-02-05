@@ -25,6 +25,10 @@ Repository for storing my personal notes, configuration files and other things I
 
 - [Domain-Driven Design](./domain-driven-design/index.md)
 - [Event Storming](./event-storming/index.md)
+
+## Soft skills
+
+- [Facilitation](./soft-skills/facilitation/index.md)
   
 ## Other
 
