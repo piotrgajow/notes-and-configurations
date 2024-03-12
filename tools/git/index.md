@@ -74,7 +74,9 @@ Run [these commands](./configureAliases.md) to setup aliases.
 
 ## Custom commands
 
-To enable scripts put them in `bin` directory of `Git` installation.
+To enable scripts on Windows put them in `bin` directory of `Git` installation.
+
+To enable scripts on Unix put them e.g. in `~/custom-commands` and add the directory to the PATH, i.e. `export PATH=$PATH:~/custom-commands`.
 
 | Command             | File                         | Description                                                                              |
 |:--------------------|:-----------------------------|:-----------------------------------------------------------------------------------------|
