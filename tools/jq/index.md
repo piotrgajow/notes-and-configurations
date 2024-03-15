@@ -9,6 +9,288 @@
 | `-s`   | Load multiple files into json array                          |
 | `-r`   | Raw output - new line delimiter & remove quotes from strings |
 
+## Syntax
+
+### to_entries
+
+Converting object to array of { key, value } objects
+
+<details>
+<summary>Example</summary>
+
+Input:
+
+```json
+{
+  "name": "John",
+  "surname": "Doe",
+  "age": 36
+}
+```
+
+Command: `to_entries`
+
+Output:
+
+```json
+[
+  {
+    "key": "name",
+    "value": "John"
+  },
+  {
+    "key": "surname",
+    "value": "Doe"
+  },
+  {
+    "key": "age",
+    "value": 36
+  }
+]
+```
+
+</details>
+
+### // - Alternative Operator
+
+Alternative operator `//` filters truthy values from the left side and if no values are present uses the values on the
+right.
+
+<details>
+<summary>Example 1</summary>
+
+Input:
+
+```json
+{
+  "name": "John",
+  "surname": "Doe",
+  "email": "john.doe@test.com",
+  "age": 36
+}
+```
+
+Command: `{ login: (.login //.email // "missing")  }`
+
+Output:
+
+```json
+{
+  "login": "john.doe@test.com"
+}
+```
+
+</details>
+
+<details>
+<summary>Example 2</summary>
+
+Input:
+
+```json
+{
+  "name": "John",
+  "surname": "Doe",
+  "age": 36
+}
+```
+
+Command: `{ login: (.login //.email // "missing")  }`
+
+Output:
+
+```json
+{
+  "login": "missing"
+}
+```
+
+</details>
+
+### reduce
+
+Array reducing into single item
+
+`reduce $EXPRESSION as $$VARIABLE ($INIT; $UPDATE)`
+
+<details>
+<summary>Example</summary>
+
+Input:
+
+```json
+[
+  1,
+  2,
+  3,
+  4,
+  5
+]
+```
+
+Command: `reduce .[] as $it (0; . + $it)`
+
+Output:
+```json
+15
+```
+
+</details>
+
+## Utility methods
+
+It is possible to define custom utility methods in jq:
+
+`def $NAME($PARAMS): $BODY;`
+
+### countBy
+
+Process array of objects and count occurrences of values for given property key.
+
+```
+def countBy($key): group_by(.[$key]) | map ({ message: .[0].[$key], count: length })
+```
+
+<details>
+<summary>Example</summary>
+
+Input:
+
+```json
+[
+  {
+    "group": "A",
+    "content": "foo"
+  },
+  {
+    "group": "A",
+    "content": "bar"
+  },
+  {
+    "group": "B",
+    "content": "foo"
+  },
+  {
+    "group": "B",
+    "content": "baz"
+  },
+  {
+    "group": "C",
+    "content": "bar"
+  },
+  {
+    "group": "C",
+    "content": "baz"
+  }
+]
+```
+
+Command: `countBy("content")`
+
+Output:
+
+```json
+[
+  {
+    "message": "bar",
+    "count": 2
+  },
+  {
+    "message": "baz",
+    "count": 2
+  },
+  {
+    "message": "foo",
+    "count": 2
+  }
+]
+```
+
+</details>
+
+### groupByAppend
+
+Process array of objects and group them by given key. Objects sharing the same key value will be combined into an array.
+
+```
+def groupByAppend($key): reduce .[] as $it ({}; .[$it[$key]] = (.[$it[$key]] // []) + [$it])
+```
+
+<details>
+<summary>Example</summary>
+
+Input:
+
+```json
+[
+  {
+    "group": "A",
+    "content": "foo"
+  },
+  {
+    "group": "A",
+    "content": "bar"
+  },
+  {
+    "group": "B",
+    "content": "foo"
+  },
+  {
+    "group": "B",
+    "content": "baz"
+  },
+  {
+    "group": "C",
+    "content": "bar"
+  },
+  {
+    "group": "C",
+    "content": "baz"
+  }
+]
+```
+
+Command: `groupByAppend("group")`
+
+Output:
+
+```json
+{
+  "A": [
+    {
+      "group": "A",
+      "content": "foo"
+    },
+    {
+      "group": "A",
+      "content": "bar"
+    }
+  ],
+  "B": [
+    {
+      "group": "B",
+      "content": "foo"
+    },
+    {
+      "group": "B",
+      "content": "baz"
+    }
+  ],
+  "C": [
+    {
+      "group": "C",
+      "content": "bar"
+    },
+    {
+      "group": "C",
+      "content": "baz"
+    }
+  ]
+}
+```
+
+</details>
+
 ## Example usage
 
 ### Count number of dependencies from package-lock.json file
@@ -17,7 +299,8 @@
 jq '.packages | length - 1' package-lock.json
 ```
 
-Takes the value at `packages` key (object containing all packages) from `package-lock.json`, calculates the number of keys and subtracts 1 (the package itself under `""` key) to get number of dependencies.
+Takes the value at `packages` key (object containing all packages) from `package-lock.json`, calculates the number of
+keys and subtracts 1 (the package itself under `""` key) to get number of dependencies.
 
 ### Copy properties from one file to another
 
@@ -27,7 +310,8 @@ Take value of `"prop-name"` from `from.json` and put it into `to.json`, save the
 jq -s '.[1]."prop-name" = .[0]."prop-name" | .[1]' from.json to.json > result.json
 ```
 
-Uses `-s` option to load multiple files into json array, perform assignment of value to second one based on the first one, and select the second one for output
+Uses `-s` option to load multiple files into json array, perform assignment of value to second one based on the first
+one, and select the second one for output
 
 ### Filter array property
 
@@ -40,22 +324,5 @@ E.g.
 ```
 jq '.logStreams = (.logStreams | map(select(.lastEventTimestamp > 1695195892000)))' source.json > result.json
 ```
-
-### Transform object to array
-
-Converting object to array of { key, value } objects
-
-```
-jq 'to_entries' source.json
-```
-
-### Use default values
-
-Alternative operator `//` filters truthy values from the left side and if no values are present uses the values on the right.
-
-```
-jq '{ "alias": (.username // .user // "not available") }' input.json
-```
-
 
 [Back](../../README.md)
