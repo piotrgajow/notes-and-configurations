@@ -152,7 +152,12 @@ _git_cl () { __gitcomp_nl "$(__git_refs)"; }
 
 `git config core.longpaths true`
 
-[Back](../../README.md)
+## Resources
+
+- [Git Documentation](https://git-scm.com/docs)
+- [Pro Git book](https://git-scm.com/book/en/v2)
+- [So You Think You Know Git - FOSDEM 2024](https://youtu.be/aolI_Rz0ZqY)
+- [So You Think You Know Git Part 2 - DevWorld 2024](https://youtu.be/Md44rcw13k4)
 
 
 [Back](../../README.md)
