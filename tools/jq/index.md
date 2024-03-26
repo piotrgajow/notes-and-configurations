@@ -291,6 +291,84 @@ Output:
 
 </details>
 
+### extendByCapture
+
+Process array of objects and extend each of them by extracting data from regex capture groups run on a given property.
+
+```
+def extendByCapture($key; $pattern): map(. + ((.[$key] | capture($pattern)) // {}));
+```
+
+<details>
+<summary>Example</summary>
+
+Input:
+
+```json
+[
+  {
+    "msg": "Error [A] Because foo",
+    "time": 1
+  },
+  {
+    "msg": "Error [B] Because foo",
+    "time": 2
+  },
+  {
+    "msg": "Error [C] Because foo",
+    "time": 3
+  },
+  {
+    "msg": "Error [A] whatever something else",
+    "time": 4
+  },
+  {
+    "msg": "Error [B] Because bar",
+    "time": 5
+  }
+]
+```
+
+Command: `extendByCapture("msg"; "Error \\[(?<type>.*)] Because (?<reason>.*)")`
+
+Output:
+
+```json
+[
+  {
+    "msg": "Error [A] Because foo",
+    "time": 1,
+    "type": "A",
+    "reason": "foo"
+  },
+  {
+    "msg": "Error [B] Because foo",
+    "time": 2,
+    "type": "B",
+    "reason": "foo"
+  },
+  {
+    "msg": "Error [C] Because foo",
+    "time": 3,
+    "type": "C",
+    "reason": "foo"
+  },
+  {
+    "msg": "Error [A] whatever something else",
+    "time": 4
+  },
+  {
+    "msg": "Error [B] Because bar",
+    "time": 5,
+    "type": "B",
+    "reason": "bar"
+  }
+]
+
+```
+
+</details>
+
 ## Example usage
 
 ### Count number of dependencies from package-lock.json file
