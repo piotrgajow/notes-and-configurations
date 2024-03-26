@@ -25,6 +25,7 @@
 | `cut -c<N>-<M>`            | Cut characters located at position from `<N>` to `<M>`                                         |
 | `cut -d'<X>' -fN`          | Cur `<N>`'th element of string after splitting by delimiter `<X>` (instead of tab)             |
 | `df -h`                    | File system disk usage in A human readable format                                              |
+| `du -sh <PATH>`            | Disk space used on path `<PATH>` in human readable format                                      |
 | `find <P> -type <X>`       | Find files of type `<X>` (d - directory, f - file, l -symbolic link, s - socket) in path `<P>` |
 | `free`                     | Display memory usage in the system                                                             |
 | `free -m`                  | Display memory usage in the system using MiB units                                             |
