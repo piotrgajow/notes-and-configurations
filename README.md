@@ -15,6 +15,7 @@ Repository for storing my personal notes, configuration files and other things I
 - [LaTeX](./tools/latex/index.md)
 - [Linux](./operating-systems/linux/index.md)
 - [MacOS](./operating-systems/mac-os/index.md)
+- [Mermaid](./tools/mermaid/index.md)
 - [MySQL](./databases/mysql/index.md)
 - [Sublime Text](./tools/sublime-text/index.md)
 - [Terraform](./tools/terraform/index.md)
