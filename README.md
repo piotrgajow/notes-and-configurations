@@ -30,6 +30,7 @@ Repository for storing my personal notes, configuration files and other things I
 ## Soft skills
 
 - [Facilitation](./soft-skills/facilitation/index.md)
+- [Onboarding](./soft-skills/oboarding/index.md)
   
 ## Other
 
