@@ -9,6 +9,31 @@
 
 - [My templates](./live-templates.md)
 
+## Http Client
+
+- Any file with `.http` or `.rest` extension can be run with IntelliJ HTTP Client.
+- Requests are delimited by `###`
+- Comments can be added with z `#` or `//`
+- Allows importing from cURL or Postman
+- Pre-request scripts can be run with `< {% script body %}` or `< path/to/script.js`
+- Post-response scripts can be run with `> {$ script body %}` or `> path/to/script.js`
+- Response output can be redirected to file with `>> path/to/file` (creating new files) or `>>! path/to/file` (overwriting same file) 
+
+Format:
+```
+Method Request-URI HTTP-Version
+Header-field: Header-value
+
+Request-Body
+```
+
+### Scripts
+
+- Scripts can include tests via `client.test(testName, function)` and `client.assert(condition, message)`
+- `client.log` will print values to the runner console
+- `jsonPath(json, path)` can be used to retrieve values from JSON (e.g. `$.key.array[0].prop`)
+- `xpath(xml, path)` can be used to retrieve values from XML (e.g. `//key/array[1]/prop/text()`)
+
 ## Other
 
 |                        Option | Description                                     |
