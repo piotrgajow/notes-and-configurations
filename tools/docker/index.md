@@ -19,6 +19,15 @@
 | -> `-it`                                          | Run container as interactive connecting terminal to its I/O            |
 | `docker stop [OPTS] <CONTAINER>`                  | Stop running container                                                 |
 
+### Docker Compose
+
+| Command                                   | Description                                                                                      |
+|:------------------------------------------|:-------------------------------------------------------------------------------------------------|
+| `docker compose up`                       | Starts all containers defined in docker-compose configuration; single process, aggregates output |
+| -> `-d`                                   | Run containers detached in background                                                            |
+| `docker compose exec [OPTS] <SRVC> <CMD>` | Run a command on a given container                                                               |
+| e.g. `docker compose exec <SRVC> bash`    | Connect to a container and open bash terminal                                                    |
+
 ## Dockerfiles
 
 | Dockerfile          | Description                |
