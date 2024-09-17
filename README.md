@@ -17,6 +17,7 @@ Repository for storing my personal notes, configuration files and other things I
 - [MacOS](./operating-systems/mac-os/index.md)
 - [Mermaid](./tools/mermaid/index.md)
 - [MySQL](./databases/mysql/index.md)
+- [Spring](./frameworks/spring/index.md)
 - [Sublime Text](./tools/sublime-text/index.md)
 - [Terraform](./tools/terraform/index.md)
 - [TypeScript](./programming-languages/typescript/index.md)
