@@ -10,6 +10,7 @@ Repository for storing my personal notes, configuration files and other things I
 - [Docker](./tools/docker/index.md)
 - [Git](./tools/git/index.md)
 - [IntelliJ](./tools/intellij/index.md)
+- [iTerm2](./tools/iterm2/index.md)
 - [JavaScript](./programming-languages/javascript)
 - [JQ](./tools/jq/index.md)
 - [LaTeX](./tools/latex/index.md)
