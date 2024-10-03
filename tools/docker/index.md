@@ -17,7 +17,13 @@
 | -> --mount type=bind,source=<SRC>,target=<TARGET> | Bind files or directories from host `SRC` (absolute) to image `TARGET` |
 | -> `--name <NAME>`                                | Name container so it can be later references by that `NAME`            |
 | -> `-it`                                          | Run container as interactive connecting terminal to its I/O            |
+| -> `-e <NAME>:<VALUE>`                            | Set environment variable for the container                             |
+| -> `-e <NAME>`                                    | Pass environment variable `<NAME>` value to the container              |
+| -> `--network=<NAME>`                             | Connect the container to network by name `<NAME>`                      |
 | `docker stop [OPTS] <CONTAINER>`                  | Stop running container                                                 |
+| `docker ps`                                       | List running containers                                                |
+| `docker network ls`                               | List existing networks                                                 |
+| `docker network inspect <NAME>`                   | Inspect network e.g. to see which containers are attached to it        |
 
 ### Docker Compose
 
