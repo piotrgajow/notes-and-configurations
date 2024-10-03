@@ -21,6 +21,7 @@ Repository for storing my personal notes, configuration files and other things I
 - [Spring](./frameworks/spring/index.md)
 - [Sublime Text](./tools/sublime-text/index.md)
 - [Terraform](./tools/terraform/index.md)
+- [TestContainers](./tools/test-containers/index.md)
 - [TypeScript](./programming-languages/typescript/index.md)
 - [Windows](./operating-systems/windows/index.md)
 
