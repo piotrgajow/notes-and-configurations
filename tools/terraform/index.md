@@ -20,6 +20,10 @@
 
 Terraform uses files found in the working directory. To change the path `-chdir=` parameter can be used to pass with custom directory.
 
+### AWS profile
+
+To use terraform with AWS profile, set the profile name into `AWS_PROFILE` environment variable, or execute the commands with `AWS_PROFILE=<profileName> terraform <command>`
+
 ## Snippets
 
 - [AWS - sending emails with lambda and SES](./aws-lambda-sending-mail.md)
