@@ -403,4 +403,14 @@ E.g.
 jq '.logStreams = (.logStreams | map(select(.lastEventTimestamp > 1695195892000)))' source.json > result.json
 ```
 
+### Filter array by type and/or property
+
+E.g.
+
+Filter array for objects with "page" property defined
+
+```
+jq '.[] | select(type == "object") | select(has("page"))' source.json > result.json
+```
+
 [Back](../../README.md)
