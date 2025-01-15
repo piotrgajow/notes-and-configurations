@@ -19,6 +19,7 @@ Repository for storing my personal notes, configuration files and other things I
 - [Mermaid](./tools/mermaid/index.md)
 - [MySQL](./databases/mysql/index.md)
 - [Spring](./frameworks/spring/index.md)
+- [Storybook](./tools/storybook/index.md)
 - [Sublime Text](./tools/sublime-text/index.md)
 - [Terraform](./tools/terraform/index.md)
 - [TestContainers](./tools/test-containers/index.md)
