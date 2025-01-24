@@ -9,6 +9,7 @@ Repository for storing my personal notes, configuration files and other things I
 - [CSS](./programming-languages/css/index.md)
 - [Docker](./tools/docker/index.md)
 - [Git](./tools/git/index.md)
+- [GraphQL](./tools/graphql/index.md)
 - [IntelliJ](./tools/intellij/index.md)
 - [iTerm2](./tools/iterm2/index.md)
 - [JavaScript](./programming-languages/javascript)
