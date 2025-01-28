@@ -1,6 +1,6 @@
 [Back](../../README.md)
 
-`jq '<COMMAND>' <JSON_FILE>`
+`jq '<COMMAND>' <JSON_FILE> > <OUT_FILE>`
 
 ## Options
 
@@ -412,5 +412,17 @@ Filter array for objects with "page" property defined
 ```
 jq '.[] | select(type == "object") | select(has("page"))' source.json > result.json
 ```
+
+### Select array items by index
+
+`.[5:15]` - select items 5 - 15
+
+`.[:50]` - select first 50 items
+
+### Take selected fields from an object
+
+`{ field1, field2 }` - create new object with only `field1` and `field2` keys.
+
+`.[] | map({ foo, bar })` - map array of objects by selecting keys `foo` and `bar`
 
 [Back](../../README.md)
