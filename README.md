@@ -8,6 +8,7 @@ Repository for storing my personal notes, configuration files and other things I
 - [Bash](./programming-languages/bash/index.md)
 - [CSS](./programming-languages/css/index.md)
 - [Docker](./tools/docker/index.md)
+- [DynamoDB](./databases/dynamodb/index.md)
 - [Git](./tools/git/index.md)
 - [GraphQL](./tools/graphql/index.md)
 - [IntelliJ](./tools/intellij/index.md)
