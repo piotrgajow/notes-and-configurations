@@ -20,6 +20,7 @@ Repository for storing my personal notes, configuration files and other things I
 - [MacOS](./operating-systems/mac-os/index.md)
 - [Mermaid](./tools/mermaid/index.md)
 - [MySQL](./databases/mysql/index.md)
+- [PyEnv](./tools/pyenv/index.md)
 - [Spring](./frameworks/spring/index.md)
 - [Storybook](./tools/storybook/index.md)
 - [Sublime Text](./tools/sublime-text/index.md)
