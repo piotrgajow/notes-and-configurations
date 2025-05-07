@@ -4,6 +4,7 @@ Repository for storing my personal notes, configuration files and other things I
 
 ## Tech
 
+- [AI](./tools/ai/index.md)
 - [AWS](./tools/aws/index.md)
 - [Bash](./programming-languages/bash/index.md)
 - [CSS](./programming-languages/css/index.md)
