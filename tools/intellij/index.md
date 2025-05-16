@@ -20,6 +20,7 @@
 - Post-response scripts can be run with `> {% script body %}` or `> path/to/script.js` (place at bottom)
 - Response output can be redirected to file with `>> path/to/file` (creating new files) or `>>! path/to/file` (overwriting same file) 
 - In-file variables with `@variable = value`
+- [Dynamic variables added by IntelliJ](https://www.jetbrains.com/help/idea/exploring-http-syntax.html#dynamic-variables)
 
 Format:
 ```
