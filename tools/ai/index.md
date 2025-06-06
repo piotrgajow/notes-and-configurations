@@ -16,4 +16,8 @@ e.g.
 
 > analyze the text below for style, voice and tone. Create a prompt to write a new paragraph in the same style, voice and tone.
 
+### Rules
+
+- Rules for coding https://10xrules.ai/
+
 [Back](../../README.md)
