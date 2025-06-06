@@ -6,6 +6,8 @@
 |:--------------------------------------------------|:-----------------------------------------------------------------------|
 | `docker buildx build [OPTS] <PATH>`               | Build docker image for Dockerfile in `PATH`                            |
 | -> `-t <NAME>[:TAG]`                              | Tag the image with name `NAME` and version `TAG`                       |
+| -> `--target <STAGE>`                             | Build given stage in multi-stage setup                                 |
+| -> `--no-cache`                                   | Force ebuild all layers                                                |
 | `docker push [OPTS] <NAME>[:TAG]`                 | Upload docker image given by `NAME` and `TAG` to the repository        |
 | `docker login [OPTS] [SERVER]`                    | Log-in to the docker repository, can specify self-hosted repository    |
 | -> `-u <USERNAME>`                                | Use given username                                                     |
