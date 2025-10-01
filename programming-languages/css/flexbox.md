@@ -46,4 +46,26 @@ Layout along the direction cross-axis
 - `stretch`
 - `baseline`
 
+### Items 
+
+`flex: flex-grow flex-shrink flex-basis`
+
+#### flex-grow
+
+Default: 0
+
+How much the item will grow relative to the rest of the items in the container if there is extra space.
+
+#### flex-shrink
+
+Default: 1
+
+How much the item will shrink relative to the rest of the items in the container if there is not enough space.
+
+#### flex-basis
+
+Default: auto
+
+Defines the starting size of the item before adjustments.
+
 [Back](./index.md)
