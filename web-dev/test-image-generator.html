@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Sharpness Test Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .controls {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .input-group {
+            display: inline-block;
+            margin-right: 20px;
+            margin-bottom: 10px;
+        }
+        label {
+            display: inline-block;
+            width: 60px;
+            font-weight: bold;
+        }
+        input {
+            width: 100px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        #renderBtn {
+            background: #4CAF50;
+            color: white;
+        }
+        #renderBtn:hover {
+            background: #45a049;
+        }
+        #downloadBtn {
+            background: #2196F3;
+            color: white;
+        }
+        #downloadBtn:hover {
+            background: #0b7dda;
+        }
+        #downloadBtn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        .canvas-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: inline-block;
+        }
+        canvas {
+            border: 1px solid #ddd;
+            display: block;
+        }
+        .info {
+            margin-top: 10px;
+            color: #666;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Sharpness Test Pattern Generator</h1>
+
+    <div class="controls">
+        <div class="input-group">
+            <label for="width">Width:</label>
+            <input type="number" id="width" value="800" min="100" max="4000">
+        </div>
+        <div class="input-group">
+            <label for="height">Height:</label>
+            <input type="number" id="height" value="600" min="100" max="4000">
+        </div>
+        <br>
+        <button id="renderBtn">Generate Test Pattern</button>
+        <button id="downloadBtn" disabled>Download as PNG</button>
+        <div class="info">
+            Device Pixel Ratio: <span id="dpr"></span> | Canvas Resolution: <span id="resolution"></span>
+        </div>
+    </div>
+
+    <div class="canvas-container">
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <script>
+        const widthInput = document.getElementById('width');
+        const heightInput = document.getElementById('height');
+        const renderBtn = document.getElementById('renderBtn');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const dprSpan = document.getElementById('dpr');
+        const resolutionSpan = document.getElementById('resolution');
+
+        // Display device pixel ratio
+        const dpr = window.devicePixelRatio || 1;
+        dprSpan.textContent = dpr;
+
+        function drawTestPattern(width, height) {
+            // Account for device pixel ratio for sharp rendering
+            const scale = dpr;
+
+            // Set canvas resolution (actual pixels)
+            canvas.width = width * scale;
+            canvas.height = height * scale;
+
+            // Set display size (CSS pixels)
+            canvas.style.width = width + 'px';
+            canvas.style.height = height + 'px';
+
+            // Scale context to match
+            ctx.scale(scale, scale);
+
+            resolutionSpan.textContent = `${canvas.width} × ${canvas.height} px`;
+
+            // Clear canvas
+            ctx.fillStyle = 'white';
+            ctx.fillRect(0, 0, width, height);
+
+            // Draw color rectangles at the top
+            const colors = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF', '#00FFFF', '#000000', '#FFFFFF'];
+            const rectWidth = width / colors.length;
+            const rectHeight = 50;
+
+            colors.forEach((color, i) => {
+                ctx.fillStyle = color;
+                ctx.fillRect(i * rectWidth, 0, rectWidth, rectHeight);
+
+                // Add border for white rectangle
+                if (color === '#FFFFFF') {
+                    ctx.strokeStyle = '#000';
+                    ctx.lineWidth = 1;
+                    ctx.strokeRect(i * rectWidth, 0, rectWidth, rectHeight);
+                }
+            });
+
+            // Draw 100x100px grid pattern
+            ctx.strokeStyle = '#CCCCCC';
+            ctx.lineWidth = 1;
+
+            // Vertical lines
+            for (let x = 0; x <= width; x += 100) {
+                ctx.beginPath();
+                ctx.moveTo(x, rectHeight);
+                ctx.lineTo(x, height);
+                ctx.stroke();
+            }
+
+            // Horizontal lines
+            for (let y = rectHeight; y <= height; y += 100) {
+                ctx.beginPath();
+                ctx.moveTo(0, y);
+                ctx.lineTo(width, y);
+                ctx.stroke();
+            }
+
+            // Thicker lines every 500px
+            ctx.strokeStyle = '#666666';
+            ctx.lineWidth = 2;
+
+            for (let x = 0; x <= width; x += 500) {
+                ctx.beginPath();
+                ctx.moveTo(x, rectHeight);
+                ctx.lineTo(x, height);
+                ctx.stroke();
+            }
+
+            for (let y = rectHeight; y <= height; y += 500) {
+                ctx.beginPath();
+                ctx.moveTo(0, y);
+                ctx.lineTo(width, y);
+                ctx.stroke();
+            }
+
+            // Draw different sized and styled texts
+            const texts = [
+                { text: '8px Regular', size: 8, weight: 'normal', y: 100 },
+                { text: '10px Bold', size: 10, weight: 'bold', y: 120 },
+                { text: '12px Regular - The quick brown fox', size: 12, weight: 'normal', y: 145 },
+                { text: '16px Bold - JUMPS OVER', size: 16, weight: 'bold', y: 175 },
+                { text: '20px Regular - the lazy dog', size: 20, weight: 'normal', y: 210 },
+                { text: '24px Bold - 0123456789', size: 24, weight: 'bold', y: 250 },
+                { text: '32px Regular - Sharp Text Test', size: 32, weight: 'normal', y: 300 },
+                { text: '48px Bold - QUALITY', size: 48, weight: 'bold', y: 370 }
+            ];
+
+            texts.forEach(item => {
+                ctx.font = `${item.weight} ${item.size}px Arial, sans-serif`;
+                ctx.fillStyle = '#000000';
+                ctx.textBaseline = 'top';
+                ctx.fillText(item.text, 20, item.y);
+
+                // Add outlined version
+                ctx.strokeStyle = '#FF0000';
+                ctx.lineWidth = 0.5;
+                ctx.strokeText(item.text, 20, item.y);
+            });
+
+            // Draw concentric circles
+            const centerX = width - 200;
+            const centerY = height - 200;
+            const maxRadius = Math.min(180, Math.min(width - centerX - 20, height - centerY - 20));
+
+            ctx.strokeStyle = '#000000';
+            ctx.lineWidth = 1;
+
+            for (let r = 20; r <= maxRadius; r += 20) {
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, r, 0, Math.PI * 2);
+                ctx.stroke();
+            }
+
+            // Fill alternating circles
+            for (let r = 20; r <= maxRadius; r += 40) {
+                ctx.fillStyle = 'rgba(255, 0, 0, 0.1)';
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, r, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            // Draw center crosshair
+            ctx.strokeStyle = '#FF0000';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(centerX - 10, centerY);
+            ctx.lineTo(centerX + 10, centerY);
+            ctx.moveTo(centerX, centerY - 10);
+            ctx.lineTo(centerX, centerY + 10);
+            ctx.stroke();
+
+            // Add diagonal lines in corners for sharpness testing
+            ctx.strokeStyle = '#000000';
+            ctx.lineWidth = 1;
+
+            // Top-left corner
+            for (let i = 0; i < 5; i++) {
+                ctx.beginPath();
+                ctx.moveTo(10 + i * 10, rectHeight + 10);
+                ctx.lineTo(60, rectHeight + 10 + i * 10);
+                ctx.stroke();
+            }
+
+            // Bottom-right corner
+            for (let i = 0; i < 5; i++) {
+                ctx.beginPath();
+                ctx.moveTo(width - 60, height - 10 - i * 10);
+                ctx.lineTo(width - 10 - i * 10, height - 60);
+                ctx.stroke();
+            }
+
+            // Add pixel-perfect 1px lines test
+            ctx.fillStyle = '#000000';
+            ctx.font = 'bold 14px Arial';
+            ctx.fillText('1px Line Test:', 20, height - 100);
+
+            ctx.strokeStyle = '#000000';
+            for (let i = 0; i < 10; i++) {
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(20, height - 80 + i * 5);
+                ctx.lineTo(200, height - 80 + i * 5);
+                ctx.stroke();
+            }
+
+            // Add resolution info text
+            ctx.fillStyle = '#0000FF';
+            ctx.font = 'bold 16px Arial';
+            ctx.fillText(`Display: ${width}×${height}px | Actual: ${canvas.width}×${canvas.height}px | DPR: ${dpr}`,
+                    width / 2 - 200, height - 30);
+
+            // Enable download button
+            downloadBtn.disabled = false;
+        }
+
+        function downloadImage() {
+            canvas.toBlob((blob) => {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `test-pattern-${widthInput.value}x${heightInput.value}.png`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            }, 'image/png');
+        }
+
+        renderBtn.addEventListener('click', () => {
+            const width = parseInt(widthInput.value);
+            const height = parseInt(heightInput.value);
+
+            if (width < 100 || height < 100) {
+                alert('Dimensions must be at least 100px');
+                return;
+            }
+
+            if (width > 4000 || height > 4000) {
+                alert('Dimensions must be less than 4000px');
+                return;
+            }
+
+            drawTestPattern(width, height);
+        });
+
+        downloadBtn.addEventListener('click', downloadImage);
+
+        // Initial render
+        drawTestPattern(800, 600);
+    </script>
+</body>
+</html>

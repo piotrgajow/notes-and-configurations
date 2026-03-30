@@ -29,6 +29,7 @@ Repository for storing my personal notes, configuration files and other things I
 - [Terraform](./tools/terraform/index.md)
 - [TestContainers](./tools/test-containers/index.md)
 - [TypeScript](./programming-languages/typescript/index.md)
+- [WebDev](./web-dev/index.md)
 - [Windows](./operating-systems/windows/index.md)
 
 ## Techniques
