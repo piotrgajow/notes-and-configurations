@@ -1,10 +1,12 @@
 [Back](../../README.md)
 
+## Tools
+
+- [Claude Code](./claude-code.md)
+
 ## Artificial Intelligence
 
-Recommended model for now: Gemini 2.5 Pro
-
-### Prompt 
+### Prompts
 
 > Acting as a [role] [perform a task] [in format]
 
