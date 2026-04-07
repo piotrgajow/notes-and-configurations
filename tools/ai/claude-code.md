@@ -32,4 +32,24 @@
 - `/resume [session]` - Resume session by name
 - `/stats` - Show daily usage etc.
 
+### Skills
+
+#### Frontmatter
+
+- `context: fork` - will create a subagent for skill execution
+- `agent: <name>` - specify which subagent should be used for the execution
+
+#### Inject context via commands
+
+When skill description contains 
+```
+!`<command>`
+```
+or
+```
+```!<commands multiline>```
+```
+it will resolve the commands and include the output in the prompt given to Clause
+
+
 [Back](./index.md)
