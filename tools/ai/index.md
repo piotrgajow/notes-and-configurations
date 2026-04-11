@@ -1,49 +1,56 @@
 [Back](../../README.md)
 
-## Tools
+## Artificial Intelligence
+
+### Agents & Tools
+
 
 - [Claude Code](./claude-code.md)
 
-## Artificial Intelligence
+### System Prompts / "How To Talk To Me"
+
+Customizing how the LLM should communicate with the user
+
+> - If you need more details, ask me questions instead of making assumptions
+> - If you do not have information, say that you do not know
+> - Provide information in a concise and to-the-point manner.
+> - Be extremely concise; Sacrifice grammar for the sake of concision
+> - Avoid long text, prefer bullet points
+> - Don't be sycophantic
+> - Use casual communication style.
+> - Skip introductions and summaries unless asked
 
 ### Prompts
 
-> Acting as a [role] [perform a task] [in format]
+#### Practices
 
-e.g.
+**Be clear and direct**
 
-> Break down the topic into smaller, easier to understand parts. Use analogies and real life examples to simplify the concept and make it more relatable
+**Structure prompts with XML**
 
->use your knowledge of topic to solve a real world problem. Explain your thought process and share your solution
+Use XML tags to wrap and delineate different parts of your prompt, such as instructions, input data, or examples. This technique helps organize complex prompts with multiple components.
 
-> analyze the text below for style, voice and tone. Create a prompt to write a new paragraph in the same style, voice and tone.
+**Use examples: The power of learning by demonstration**
 
-Use delimiters when needed
+Provide output examples via <examples><example>...</example></examples> tags.
 
-> Summarize the text delimited by triple backticks into a single sentence. 
-> ```{text}```
+**Chain-of-thought prompting**
 
-Give the model time to think
+Technique where you explicitly instruct LLM to break down complex problems or questions into a series of logical steps, articulate its reasoning at each step, and then use that reasoning to provide a final answer or solution. It's akin to asking a colleague to "think out loud" while solving a problem.
 
-- provide steps to work out the solution
-- instruct the model to work out its own solution
+Provide a place to put its thoughts before generating an answer. Consider using XML tags like <thinking> and <answer>.
 
-### Perplexity
+**Role prompting**
 
-#### Prompting
+By assigning a role to LLM, you can prime it to respond in a specific way, improve its accuracy and performance, and tailor its tone and demeanor to match the desired context.
+
+#### Examples
 
 > Please quote the phrases mentioned in the sources without paraphrasing.
 
 To reduce the halucinations in the results
 
-#### Search operators
-
-- `filetype:` , e.g. `filetype:pdf` - looking only for certain file types
-- `before:` & `after:`, e.g. `after:2024-01-01` - narrowing down dates
-- `site:` and `-site:`, e.g. `-site:com` - narrowing down which sites to use/do n't use in search
-- `inurl:`, e.g. `inurl:review` - require certain keywords in the url
-
-### Other
+## Other
 
 - Rules for coding https://10xrules.ai/
 - https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools

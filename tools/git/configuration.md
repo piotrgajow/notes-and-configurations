@@ -20,6 +20,8 @@ echo '__notes__' >> ~/.gitignore
 echo '__stuff__' >> ~/.gitignore
 echo '.idea' >> ~/.gitignore
 echo '.DS_Store' >> ~/.gitignore
+echo 'CLAUDE.local.md' >> ~/.gitignore
+echo '.claude/settings.local.json' >> ~/.gitignore
 git config --global core.excludesfile '~/.gitignore'
 ```
 
