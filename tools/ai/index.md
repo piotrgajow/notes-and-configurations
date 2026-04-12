@@ -2,9 +2,7 @@
 
 ## Artificial Intelligence
 
-### Agents & Tools
-
-
+- [Agent Skills](./skills.md)
 - [Claude Code](./claude-code.md)
 
 ### System Prompts / "How To Talk To Me"

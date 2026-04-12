@@ -45,22 +45,24 @@ Markdown files with context included in every prompt. Read at the session start.
 
 - Max 200 lines per file
 - Should use Markdown headers and bullets to group related instructions
-- Should contain specific instructions (can be verified)
-- Can import more files using `@path/to/import` syntax
+- Should contain specific instructions
 
-If repository uses `AGENTS.md` you can create `CLAUDE.md` file that iports it.
+If repository uses `AGENTS.md` you can create `CLAUDE.md` file that imports it `@AGENTS.md`.
 
 Project can contain multiple `CLAUDE.md` files nested in directories. Claude will read them from most to least specific.
 
 Sections:
-- Project context - what the project is about
-- Tech Stack - important dependencies, tools used
-- Project structure - how the project is organized; directories, modules and their purpose
-- Workflow - commands to run, test, generate code etc.the
-- Code style preferences - specific conventions to be used everywhere (if only applicable for some files, consider adding rules instead)
-- Additional information 
+- Project Context & Architecture Overview - what the project is about, major components and their interactions
+- Tech Stack - important dependencies & tools used with versions specified
+- Curated Knowledge Sources - where to look for more information - documentation links, blog posts, tutorials, internal references, etc.
+- Project Structure - how the project is organized; directories, modules and their purpose
+- Workflow - commands to run, test etc.
+- Additional Information
+  - code style preference - specific conventions to be used everywhere (if only applicable for some files, consider adding rules instead)
   - links to files with some other specific information - documentation, specifications, ADRs
-  - Environment requirements
+  - naming conventions - how to name things
+  - environment requirements
+  - anti-patterns - things to avoid
 
 #### Rules
 
