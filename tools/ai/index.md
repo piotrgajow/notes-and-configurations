@@ -50,6 +50,14 @@ To reduce the halucinations in the results
 
 ## Other
 
+### Resources
+
+- ThoughtWorks:
+  - [Knowledge Priming](https://martinfowler.com/articles/reduce-friction-ai/knowledge-priming.html) - Building good context foundations (AGENTS.md / CLAUDE.md etc.)
+  - [Design-First Collaboration](https://martinfowler.com/articles/reduce-friction-ai/design-first-collaboration.html) - Creating the plan before building the solution
+  - [Context Anchoring](https://martinfowler.com/articles/reduce-friction-ai/context-anchoring.html) - Capturing key decisions
+  - [Encoding Team Standards](https://martinfowler.com/articles/reduce-friction-ai/encoding-team-standards.html) - Converting knowledge and experience of people into AI usable instructions (skills/rules/commands etc.)
+  - [Feedback Flywheel](https://martinfowler.com/articles/reduce-friction-ai/feedback-flywheel.html) - Maintaining and iteratively improving the above
 - Rules for coding https://10xrules.ai/
 - https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools
 

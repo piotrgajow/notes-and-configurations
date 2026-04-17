@@ -30,6 +30,7 @@ TBD:
 
 ### Skill sources
 
+- https://skills.sh/ - Open Agent Skills Ecosystem
 - https://github.com/affaan-m/everything-claude-code - Anthropic hackathon winner skills
 - https://www.aihero.dev/5-agent-skills-i-use-every-day - Featured skills by Matt Pocock
 - https://github.com/anthropics/skills - Official skills created by Anthropic team
