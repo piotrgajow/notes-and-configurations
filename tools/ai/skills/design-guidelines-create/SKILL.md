@@ -1,8 +1,9 @@
 ---
-name: create-design-guidelines
+name: design-guidelines-create
 description: Guide the user through creating a structured design guidelines document for their web application. The output is a human-readable and machine-readable artifact that AI agents (including Pencil) can use to generate visually consistent UI.
 argument-hint: [app description or existing brand info]
 disable-model-invocation: true
+allowed-tools: Read(${CLAUDE_SKILL_DIR}/**)
 ---
 
 ## Role
@@ -12,8 +13,6 @@ structured design guidelines document for their web application. Your goal is to
 make the process feel like a natural conversation, not a form. Offer concrete
 options and examples at every step — never leave the user staring at a blank
 question. Use analogies to well-known products and brands when helpful.
-
----
 
 ## Process Overview
 
@@ -25,24 +24,20 @@ announce the phase names to the user.
 3. **Confirm** — Show a summary for review and adjustment
 4. **Output** — Produce the final guidelines document
 
----
-
 ## Phase 1: Discover
 
 Start by asking about the product in plain language. Cover:
 
 - What does the app do? Who will use it?
+- Are there 2–3 apps, websites, brands, or other materials that can be used as reference? (Ask for
+  URLs, names, or images — these are gold for calibrating taste.)
 - What feeling should it evoke? (e.g. trustworthy, playful, premium, minimal,
   energetic, calm)
-- Are there 2-3 apps, websites, or brands whose look the user admires? (Ask for
-  URLs or names — these are gold for calibrating taste.)
 - Is there an existing logo, brand name, or color the user is already committed to?
 
 Keep this to 3-4 questions max. Listen for clues — "it's a finance app" already
 tells you a lot about appropriate tone. Do not ask all questions at once — ask
 1-2, get answers, then ask the rest if needed.
-
----
 
 ## Phase 2: Define
 
@@ -75,6 +70,9 @@ secondary).
 
 Generate a complete palette with specific hex values — do not leave placeholders.
 
+Show a preview of the palette (e.g. generate a simple HTML file with a div for
+each colour)
+
 ### 2.3 Typography
 
 Offer font pairings (heading + body), all from Google Fonts unless specified
@@ -91,6 +89,8 @@ Example pairings to offer:
 
 Define: base font size (recommend 16px), heading scale (suggest a ratio like 1.25
 or 1.5), line height (1.5 for body, 1.2 for headings), font weights in use.
+
+For proposed fonts include url to the font page where the user can see how it looks like.
 
 ### 2.4 CSS Framework
 
@@ -133,8 +133,6 @@ Just confirm two defaults or let the user override:
 - Transition duration: fast (150ms), normal (250ms), slow (400ms)
 - Easing: ease-out for entrances, ease-in for exits
 
----
-
 ## Phase 3: Confirm
 
 Summarize all choices in a concise table. Ask: "Does this feel right? Anything
@@ -142,12 +140,10 @@ you'd like to adjust before I generate the final guidelines?"
 
 Address any adjustments, then move to Phase 4.
 
----
-
 ## Phase 4: Output
 
 Produce the design guidelines document using the template in
-`references/guidelines-template.md`.
+`${CLAUDE_SKILL_DIR}/references/guidelines-template.md`.
 
 **All values must be explicit and unambiguous** — never leave template placeholders
 in the output. Generate every hex value, every pixel value, every font name.
@@ -159,9 +155,7 @@ The document has three layers that serve different readers:
    coding agents
 
 After outputting the document, ask the user where to save it. Suggest a sensible
-default like `design/guidelines.md` relative to their project root.
-
----
+default like `design/guidelines.md` relative to their project root. Add information about the guideline document to the AGENTS.md or CLAUDE.md file
 
 ## Conversation Rules
 

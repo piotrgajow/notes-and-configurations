@@ -7,11 +7,14 @@ action or solve a problem. Any context/prompt that generates good responses can 
 
 ### Custom skills
 
-| Name                                                                     | Usage  | Description                                                                               | Status      | 
-|--------------------------------------------------------------------------|--------|-------------------------------------------------------------------------------------------|-------------|
-| [`create-design-guidelines`](./skills/create-design-guidelines/SKILL.md) | manual | Guide non-designers through creating a structured design guidelines document for web apps | Testing     | 
-| [`meta-plan`](./skills/meta-plan/SKILL.md)                               | manual | Planning tassks with focus on improving AI context with memory and skills                 | Considering |
-| [`refine-idea`](./skills/refine-idea/SKILL.md)                           | manual | Refine idea into a PRD                                                                    | Testing     |
+| Name                       | Usage  | Description                                                                               | Status        | 
+|----------------------------|--------|-------------------------------------------------------------------------------------------|---------------|
+| `design-guidelines-create` | manual | Guide non-designers through creating a structured design guidelines document for web apps | Testing       | 
+| `design-with-pencil`       | manual | Create UI designs using Pencil.dev                                                        | Testing       |
+| `meta-plan`                | manual | Planning tassks with focus on improving AI context with memory and skills                 | Considering   |
+| `refine-idea`              | manual | Refine idea into a SPEC file                                                              | Testing       |
+| `sitemap-from-spec-create` | manual | Create page documents from SPEC                                                           | Testing       |
+| `skill-create`             | manual | Meta skill to create other skills                                                         | Testing       |
 
 TBD:
 - refining ideas into prds and other documentation skills

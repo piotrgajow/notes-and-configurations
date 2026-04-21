@@ -2,7 +2,6 @@
 name: meta-plan
 description: Look at a task and evaluate the context, memory, documentation, skill rules etc. for improvements
 argument-hint: [task]
-context: fork
 disable-model-invocation: true
 ---
 
