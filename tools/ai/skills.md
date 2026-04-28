@@ -7,14 +7,16 @@ action or solve a problem. Any context/prompt that generates good responses can 
 
 ### Custom skills
 
-| Name                       | Usage  | Description                                                                               | Status        | 
-|----------------------------|--------|-------------------------------------------------------------------------------------------|---------------|
-| `design-guidelines-create` | manual | Guide non-designers through creating a structured design guidelines document for web apps | Testing       | 
-| `design-with-pencil`       | manual | Create UI designs using Pencil.dev                                                        | Testing       |
-| `meta-plan`                | manual | Planning tassks with focus on improving AI context with memory and skills                 | Considering   |
-| `refine-idea`              | manual | Refine idea into a SPEC file                                                              | Testing       |
-| `sitemap-from-spec-create` | manual | Create page documents from SPEC                                                           | Testing       |
-| `skill-create`             | manual | Meta skill to create other skills                                                         | Testing       |
+| Name                       | Usage  | Description                                                                               | Status      | Sources   |
+|----------------------------|--------|-------------------------------------------------------------------------------------------|-------------|-----------|
+| `design-guidelines-create` | manual | Guide non-designers through creating a structured design guidelines document for web apps | Testing     | TBD       |
+| `design-with-pencil`       | manual | Create UI designs using Pencil.dev                                                        | Testing     | TBD       |
+| `meta-plan`                | manual | Planning tassks with focus on improving AI context with memory and skills                 | Considering | TBD       |
+| `plan-implementation`      | manual | Convert specification documents into implementation plan                                  | Considering | TBD       |
+| `refine-idea`              | manual | Refine idea into a SPEC file                                                              | Testing     | TBD       |
+| `retro`                    | manual | Process conversation and suggest improvements to the AI system                            | Considering | skills.sh |
+| `sitemap-from-spec-create` | manual | Create page documents from SPEC                                                           | Testing     | TBD       |
+| `skill-create`             | manual | Meta skill to create other skills                                                         | Testing     | TBD       |
 
 TBD:
 - refining ideas into prds and other documentation skills
