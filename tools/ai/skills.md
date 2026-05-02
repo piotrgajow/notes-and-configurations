@@ -19,6 +19,14 @@ action or solve a problem. Any context/prompt that generates good responses can 
 | `skill-create`             | manual | Meta skill to create other skills                                                         | Testing     | TBD       |
 
 TBD:
+- creating and refining SPEC files with a rough description
+- development in a TDD style
+  - plan via iterations and test cases
+  - give commit message but do not commit
+  - prettier format & tests run
+
+
+TBD:
 - refining ideas into prds and other documentation skills
   - https://martinfowler.com/articles/reduce-friction-ai/design-first-collaboration.html
 - preparing feature implementation plan

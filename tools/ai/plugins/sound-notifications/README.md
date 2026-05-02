@@ -11,7 +11,7 @@ Include the below hooks in the `settings.json` file under `"hooks": {}`:
 ```
 "SessionStart": [
   {
-    "matcher": "",
+    "matcher": "startup",
     "hooks": [
       {
         "type": "command",
@@ -23,7 +23,7 @@ Include the below hooks in the `settings.json` file under `"hooks": {}`:
 ```
 
 ```
-"TaskCompleted": [
+"Stop": [
   {
     "matcher": "",
     "hooks": [
@@ -37,9 +37,9 @@ Include the below hooks in the `settings.json` file under `"hooks": {}`:
 ```
 
 ```
-"Notification": [
+"PermissionRequest": [
   {
-    "matcher": "idle_prompt",
+    "matcher": "",
     "hooks": [
       {
         "type": "command",
