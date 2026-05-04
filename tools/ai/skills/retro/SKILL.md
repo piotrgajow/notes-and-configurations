@@ -2,6 +2,7 @@
 name: retro
 description: Run a retrospective on the current conversation. Identify every place the user corrected Claude's plan or actions and propose targeted updates so the same mistake will not repeat.
 disable-model-invocation: true
+allowed-tools: Read(~/CLAUDE.md) Read(~/.claude/skills/**) Read(./**/*.md) Read(./.claude/skills/**)
 ---
 
 # Retro
