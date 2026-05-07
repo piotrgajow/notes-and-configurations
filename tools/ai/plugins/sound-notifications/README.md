@@ -15,7 +15,7 @@ Include the below hooks in the `settings.json` file under `"hooks": {}`:
     "hooks": [
       {
         "type": "command",
-        "command": "afplay ~/.claude/_sounds/startup/BattlecruiserOperational.mp3"
+        "command": "~/.claude/_sounds/play-random ~/.claude/_sounds/startup"
       }
     ]
   }
@@ -29,7 +29,7 @@ Include the below hooks in the `settings.json` file under `"hooks": {}`:
     "hooks": [
       {
         "type": "command",
-        "command": "afplay ~/.claude/_sounds/task-completed/JobsFinished.mp3"
+        "command": "~/.claude/_sounds/play-random ~/.claude/_sounds/task-completed"
       }
     ]
   }
@@ -43,7 +43,7 @@ Include the below hooks in the `settings.json` file under `"hooks": {}`:
     "hooks": [
       {
         "type": "command",
-        "command": "afplay ~/.claude/_sounds/idle/WaitingOnYou.mp3"
+        "command": "~/.claude/_sounds/play-random ~/.claude/_sounds/attention-needed"
       }
     ]
   }
